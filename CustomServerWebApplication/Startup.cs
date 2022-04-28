@@ -84,7 +84,7 @@ namespace AAS.MyServerApp
                         TermsOfService = new Uri("https://github.com/admin-shell-io/aas-specs")
                     });
                     c.CustomSchemaIds(type => type.FullName);
-                    c.IncludeXmlComments($"{AppContext.BaseDirectory}{Path.DirectorySeparatorChar}{_hostingEnv.ApplicationName}.xml");
+                    c.IncludeXmlComments($"{AppContext.BaseDirectory}{Path.DirectorySeparatorChar}{typeof(AAS.Server.Models.AssetAdministrationShell).Assembly.GetName().Name}.xml");
 
                     // Include DataAnnotation attributes on Controller Action parameters as Swagger validation rules (e.g required, pattern, ..)
                     // Use [ValidateModelState] on Actions to actually validate it in C# as well!
