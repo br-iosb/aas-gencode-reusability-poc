@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteConceptDescriptionById (string cdIdentifier);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteConceptDescriptionByIdWithHttpInfo (string cdIdentifier);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -75,7 +75,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ConceptDescription</returns>
         ConceptDescription GetConceptDescriptionById (string cdIdentifier);
@@ -86,7 +86,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of ConceptDescription</returns>
         ApiResponse<ConceptDescription> GetConceptDescriptionByIdWithHttpInfo (string cdIdentifier);
@@ -96,7 +96,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>ConceptDescription</returns>
         ConceptDescription PostConceptDescription (ConceptDescription body);
@@ -107,7 +107,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>ApiResponse of ConceptDescription</returns>
         ApiResponse<ConceptDescription> PostConceptDescriptionWithHttpInfo (ConceptDescription body);
@@ -117,7 +117,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -129,7 +129,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -142,7 +142,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteConceptDescriptionByIdAsync (string cdIdentifier);
@@ -153,7 +153,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConceptDescriptionByIdAsyncWithHttpInfo (string cdIdentifier);
@@ -163,7 +163,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -176,7 +176,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -188,7 +188,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ConceptDescription</returns>
         System.Threading.Tasks.Task<ConceptDescription> GetConceptDescriptionByIdAsync (string cdIdentifier);
@@ -199,7 +199,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (ConceptDescription)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConceptDescription>> GetConceptDescriptionByIdAsyncWithHttpInfo (string cdIdentifier);
@@ -209,7 +209,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>Task of ConceptDescription</returns>
         System.Threading.Tasks.Task<ConceptDescription> PostConceptDescriptionAsync (ConceptDescription body);
@@ -220,7 +220,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>Task of ApiResponse (ConceptDescription)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConceptDescription>> PostConceptDescriptionAsyncWithHttpInfo (ConceptDescription body);
@@ -230,7 +230,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -242,7 +242,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -255,7 +255,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class ConceptDescriptionRepositoryInterfaceApi : IConceptDescriptionRepositoryInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ConceptDescriptionRepositoryInterfaceApi"/> class.
@@ -263,9 +263,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public ConceptDescriptionRepositoryInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -274,9 +274,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public ConceptDescriptionRepositoryInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -285,14 +285,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ConceptDescriptionRepositoryInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public ConceptDescriptionRepositoryInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -318,12 +318,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -361,7 +361,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteConceptDescriptionById (string cdIdentifier)
@@ -372,7 +372,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteConceptDescriptionByIdWithHttpInfo (string cdIdentifier)
@@ -424,7 +424,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteConceptDescriptionByIdAsync (string cdIdentifier)
@@ -436,7 +436,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConceptDescriptionByIdAsyncWithHttpInfo (string cdIdentifier)
@@ -488,7 +488,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Concept Descriptions 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -502,7 +502,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Concept Descriptions 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -556,7 +556,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Concept Descriptions 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -571,7 +571,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Concept Descriptions 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShort">The Concept Description’s IdShort (optional)</param>
         /// <param name="isCaseOf">IsCaseOf reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="dataSpecificationRef">DataSpecification reference (BASE64-URL-encoded) (optional)</param>
@@ -625,7 +625,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ConceptDescription</returns>
         public ConceptDescription GetConceptDescriptionById (string cdIdentifier)
@@ -637,7 +637,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of ConceptDescription</returns>
         public ApiResponse< ConceptDescription > GetConceptDescriptionByIdWithHttpInfo (string cdIdentifier)
@@ -690,7 +690,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ConceptDescription</returns>
         public async System.Threading.Tasks.Task<ConceptDescription> GetConceptDescriptionByIdAsync (string cdIdentifier)
@@ -703,7 +703,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (ConceptDescription)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConceptDescription>> GetConceptDescriptionByIdAsyncWithHttpInfo (string cdIdentifier)
@@ -756,7 +756,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>ConceptDescription</returns>
         public ConceptDescription PostConceptDescription (ConceptDescription body)
@@ -768,7 +768,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>ApiResponse of ConceptDescription</returns>
         public ApiResponse< ConceptDescription > PostConceptDescriptionWithHttpInfo (ConceptDescription body)
@@ -829,7 +829,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>Task of ConceptDescription</returns>
         public async System.Threading.Tasks.Task<ConceptDescription> PostConceptDescriptionAsync (ConceptDescription body)
@@ -842,7 +842,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <returns>Task of ApiResponse (ConceptDescription)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConceptDescription>> PostConceptDescriptionAsyncWithHttpInfo (ConceptDescription body)
@@ -903,7 +903,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -915,7 +915,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -980,7 +980,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -993,7 +993,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Concept Description 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Concept Description object</param>
         /// <param name="cdIdentifier">The Concept Description’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>

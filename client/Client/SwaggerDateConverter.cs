@@ -9,7 +9,7 @@
  */
 using Newtonsoft.Json.Converters;
 
-namespace IO.Swagger.Client
+namespace AAS.Client.Client
 {
     /// <summary>
     /// Formatter for 'date' swagger formats ss defined by full-date - RFC3339

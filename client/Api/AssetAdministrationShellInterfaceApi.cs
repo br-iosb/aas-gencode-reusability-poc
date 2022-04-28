@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteSubmodelReferenceById (string submodelIdentifier);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSubmodelReferenceByIdWithHttpInfo (string submodelIdentifier);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Reference&gt;</returns>
         List<Reference> GetAllSubmodelReferences ();
 
@@ -60,7 +60,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Reference&gt;</returns>
         ApiResponse<List<Reference>> GetAllSubmodelReferencesWithHttpInfo ();
         /// <summary>
@@ -69,7 +69,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>AssetAdministrationShell</returns>
         AssetAdministrationShell GetAssetAdministrationShell (string content = null);
@@ -80,7 +80,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>ApiResponse of AssetAdministrationShell</returns>
         ApiResponse<AssetAdministrationShell> GetAssetAdministrationShellWithHttpInfo (string content = null);
@@ -90,7 +90,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AssetInformation</returns>
         AssetInformation GetAssetInformation ();
 
@@ -100,7 +100,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AssetInformation</returns>
         ApiResponse<AssetInformation> GetAssetInformationWithHttpInfo ();
         /// <summary>
@@ -109,7 +109,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>Reference</returns>
         Reference PostSubmodelReference (Reference body);
@@ -120,7 +120,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>ApiResponse of Reference</returns>
         ApiResponse<Reference> PostSubmodelReferenceWithHttpInfo (Reference body);
@@ -130,7 +130,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns></returns>
@@ -142,7 +142,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns></returns>
         void PutAssetInformation (AssetInformation body);
@@ -164,7 +164,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PutAssetInformationWithHttpInfo (AssetInformation body);
@@ -176,7 +176,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteSubmodelReferenceByIdAsync (string submodelIdentifier);
@@ -187,7 +187,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubmodelReferenceByIdAsyncWithHttpInfo (string submodelIdentifier);
@@ -197,7 +197,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Reference&gt;</returns>
         System.Threading.Tasks.Task<List<Reference>> GetAllSubmodelReferencesAsync ();
 
@@ -207,7 +207,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Reference&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Reference>>> GetAllSubmodelReferencesAsyncWithHttpInfo ();
         /// <summary>
@@ -216,7 +216,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of AssetAdministrationShell</returns>
         System.Threading.Tasks.Task<AssetAdministrationShell> GetAssetAdministrationShellAsync (string content = null);
@@ -227,7 +227,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShell)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> GetAssetAdministrationShellAsyncWithHttpInfo (string content = null);
@@ -237,7 +237,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AssetInformation</returns>
         System.Threading.Tasks.Task<AssetInformation> GetAssetInformationAsync ();
 
@@ -247,7 +247,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AssetInformation)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssetInformation>> GetAssetInformationAsyncWithHttpInfo ();
         /// <summary>
@@ -256,7 +256,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>Task of Reference</returns>
         System.Threading.Tasks.Task<Reference> PostSubmodelReferenceAsync (Reference body);
@@ -267,7 +267,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>Task of ApiResponse (Reference)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reference>> PostSubmodelReferenceAsyncWithHttpInfo (Reference body);
@@ -277,7 +277,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of void</returns>
@@ -289,7 +289,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -300,7 +300,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PutAssetInformationAsync (AssetInformation body);
@@ -311,7 +311,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PutAssetInformationAsyncWithHttpInfo (AssetInformation body);
@@ -323,7 +323,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class AssetAdministrationShellInterfaceApi : IAssetAdministrationShellInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetAdministrationShellInterfaceApi"/> class.
@@ -331,9 +331,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -342,9 +342,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -353,14 +353,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AssetAdministrationShellInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public AssetAdministrationShellInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -386,12 +386,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -429,7 +429,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes the submodel reference from the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteSubmodelReferenceById (string submodelIdentifier)
@@ -440,7 +440,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes the submodel reference from the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSubmodelReferenceByIdWithHttpInfo (string submodelIdentifier)
@@ -492,7 +492,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes the submodel reference from the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteSubmodelReferenceByIdAsync (string submodelIdentifier)
@@ -504,7 +504,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes the submodel reference from the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubmodelReferenceByIdAsyncWithHttpInfo (string submodelIdentifier)
@@ -556,7 +556,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel references 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Reference&gt;</returns>
         public List<Reference> GetAllSubmodelReferences ()
         {
@@ -567,7 +567,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel references 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Reference&gt;</returns>
         public ApiResponse< List<Reference> > GetAllSubmodelReferencesWithHttpInfo ()
         {
@@ -615,7 +615,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel references 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Reference&gt;</returns>
         public async System.Threading.Tasks.Task<List<Reference>> GetAllSubmodelReferencesAsync ()
         {
@@ -627,7 +627,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel references 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Reference&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Reference>>> GetAllSubmodelReferencesAsyncWithHttpInfo ()
         {
@@ -675,7 +675,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>AssetAdministrationShell</returns>
         public AssetAdministrationShell GetAssetAdministrationShell (string content = null)
@@ -687,7 +687,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>ApiResponse of AssetAdministrationShell</returns>
         public ApiResponse< AssetAdministrationShell > GetAssetAdministrationShellWithHttpInfo (string content = null)
@@ -737,7 +737,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of AssetAdministrationShell</returns>
         public async System.Threading.Tasks.Task<AssetAdministrationShell> GetAssetAdministrationShellAsync (string content = null)
@@ -750,7 +750,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShell)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> GetAssetAdministrationShellAsyncWithHttpInfo (string content = null)
@@ -800,7 +800,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AssetInformation</returns>
         public AssetInformation GetAssetInformation ()
         {
@@ -811,7 +811,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AssetInformation</returns>
         public ApiResponse< AssetInformation > GetAssetInformationWithHttpInfo ()
         {
@@ -859,7 +859,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AssetInformation</returns>
         public async System.Threading.Tasks.Task<AssetInformation> GetAssetInformationAsync ()
         {
@@ -871,7 +871,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AssetInformation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AssetInformation>> GetAssetInformationAsyncWithHttpInfo ()
         {
@@ -919,7 +919,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a submodel reference at the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>Reference</returns>
         public Reference PostSubmodelReference (Reference body)
@@ -931,7 +931,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a submodel reference at the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>ApiResponse of Reference</returns>
         public ApiResponse< Reference > PostSubmodelReferenceWithHttpInfo (Reference body)
@@ -992,7 +992,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a submodel reference at the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>Task of Reference</returns>
         public async System.Threading.Tasks.Task<Reference> PostSubmodelReferenceAsync (Reference body)
@@ -1005,7 +1005,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a submodel reference at the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Reference to the Submodel</param>
         /// <returns>Task of ApiResponse (Reference)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Reference>> PostSubmodelReferenceAsyncWithHttpInfo (Reference body)
@@ -1066,7 +1066,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns></returns>
@@ -1078,7 +1078,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1140,7 +1140,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of void</returns>
@@ -1153,7 +1153,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1215,7 +1215,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns></returns>
         public void PutAssetInformation (AssetInformation body)
@@ -1226,7 +1226,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PutAssetInformationWithHttpInfo (AssetInformation body)
@@ -1286,7 +1286,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PutAssetInformationAsync (AssetInformation body)
@@ -1298,7 +1298,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Asset Information 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Information object</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutAssetInformationAsyncWithHttpInfo (AssetInformation body)

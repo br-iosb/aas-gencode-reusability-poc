@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteAssetAdministrationShellDescriptorById (string aasIdentifier);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAssetAdministrationShellDescriptorByIdWithHttpInfo (string aasIdentifier);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;AssetAdministrationShellDescriptor&gt;</returns>
         List<AssetAdministrationShellDescriptor> GetAllAssetAdministrationShellDescriptors ();
 
@@ -83,7 +83,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;AssetAdministrationShellDescriptor&gt;</returns>
         ApiResponse<List<AssetAdministrationShellDescriptor>> GetAllAssetAdministrationShellDescriptorsWithHttpInfo ();
         /// <summary>
@@ -92,7 +92,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>List&lt;SubmodelDescriptor&gt;</returns>
         List<SubmodelDescriptor> GetAllSubmodelDescriptorsAASRegistry (string aasIdentifier);
@@ -103,7 +103,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of List&lt;SubmodelDescriptor&gt;</returns>
         ApiResponse<List<SubmodelDescriptor>> GetAllSubmodelDescriptorsAASRegistryWithHttpInfo (string aasIdentifier);
@@ -113,7 +113,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>AssetAdministrationShellDescriptor</returns>
         AssetAdministrationShellDescriptor GetAssetAdministrationShellDescriptorById (string aasIdentifier);
@@ -124,7 +124,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of AssetAdministrationShellDescriptor</returns>
         ApiResponse<AssetAdministrationShellDescriptor> GetAssetAdministrationShellDescriptorByIdWithHttpInfo (string aasIdentifier);
@@ -134,7 +134,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>SubmodelDescriptor</returns>
@@ -146,7 +146,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of SubmodelDescriptor</returns>
@@ -157,7 +157,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>AssetAdministrationShellDescriptor</returns>
         AssetAdministrationShellDescriptor PostAssetAdministrationShellDescriptor (AssetAdministrationShellDescriptor body);
@@ -168,7 +168,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>ApiResponse of AssetAdministrationShellDescriptor</returns>
         ApiResponse<AssetAdministrationShellDescriptor> PostAssetAdministrationShellDescriptorWithHttpInfo (AssetAdministrationShellDescriptor body);
@@ -178,7 +178,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>SubmodelDescriptor</returns>
@@ -190,7 +190,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of SubmodelDescriptor</returns>
@@ -201,7 +201,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -213,7 +213,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -224,7 +224,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -237,7 +237,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -251,7 +251,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteAssetAdministrationShellDescriptorByIdAsync (string aasIdentifier);
@@ -262,7 +262,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssetAdministrationShellDescriptorByIdAsyncWithHttpInfo (string aasIdentifier);
@@ -272,7 +272,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -284,7 +284,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -295,7 +295,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;AssetAdministrationShellDescriptor&gt;</returns>
         System.Threading.Tasks.Task<List<AssetAdministrationShellDescriptor>> GetAllAssetAdministrationShellDescriptorsAsync ();
 
@@ -305,7 +305,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;AssetAdministrationShellDescriptor&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AssetAdministrationShellDescriptor>>> GetAllAssetAdministrationShellDescriptorsAsyncWithHttpInfo ();
         /// <summary>
@@ -314,7 +314,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of List&lt;SubmodelDescriptor&gt;</returns>
         System.Threading.Tasks.Task<List<SubmodelDescriptor>> GetAllSubmodelDescriptorsAASRegistryAsync (string aasIdentifier);
@@ -325,7 +325,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (List&lt;SubmodelDescriptor&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SubmodelDescriptor>>> GetAllSubmodelDescriptorsAASRegistryAsyncWithHttpInfo (string aasIdentifier);
@@ -335,7 +335,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of AssetAdministrationShellDescriptor</returns>
         System.Threading.Tasks.Task<AssetAdministrationShellDescriptor> GetAssetAdministrationShellDescriptorByIdAsync (string aasIdentifier);
@@ -346,7 +346,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShellDescriptor)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShellDescriptor>> GetAssetAdministrationShellDescriptorByIdAsyncWithHttpInfo (string aasIdentifier);
@@ -356,7 +356,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of SubmodelDescriptor</returns>
@@ -368,7 +368,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (SubmodelDescriptor)</returns>
@@ -379,7 +379,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>Task of AssetAdministrationShellDescriptor</returns>
         System.Threading.Tasks.Task<AssetAdministrationShellDescriptor> PostAssetAdministrationShellDescriptorAsync (AssetAdministrationShellDescriptor body);
@@ -390,7 +390,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShellDescriptor)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShellDescriptor>> PostAssetAdministrationShellDescriptorAsyncWithHttpInfo (AssetAdministrationShellDescriptor body);
@@ -400,7 +400,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of SubmodelDescriptor</returns>
@@ -412,7 +412,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (SubmodelDescriptor)</returns>
@@ -423,7 +423,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -435,7 +435,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -446,7 +446,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -459,7 +459,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -473,7 +473,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class AssetAdministrationShellRegistryInterfaceApi : IAssetAdministrationShellRegistryInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetAdministrationShellRegistryInterfaceApi"/> class.
@@ -481,9 +481,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellRegistryInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -492,9 +492,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellRegistryInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -503,14 +503,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AssetAdministrationShellRegistryInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public AssetAdministrationShellRegistryInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -536,12 +536,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -579,7 +579,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteAssetAdministrationShellDescriptorById (string aasIdentifier)
@@ -590,7 +590,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAssetAdministrationShellDescriptorByIdWithHttpInfo (string aasIdentifier)
@@ -642,7 +642,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAssetAdministrationShellDescriptorByIdAsync (string aasIdentifier)
@@ -654,7 +654,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssetAdministrationShellDescriptorByIdAsyncWithHttpInfo (string aasIdentifier)
@@ -706,7 +706,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel Descriptor, i.e. de-registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -718,7 +718,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel Descriptor, i.e. de-registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -775,7 +775,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel Descriptor, i.e. de-registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -788,7 +788,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel Descriptor, i.e. de-registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -845,7 +845,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shell Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;AssetAdministrationShellDescriptor&gt;</returns>
         public List<AssetAdministrationShellDescriptor> GetAllAssetAdministrationShellDescriptors ()
         {
@@ -856,7 +856,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shell Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;AssetAdministrationShellDescriptor&gt;</returns>
         public ApiResponse< List<AssetAdministrationShellDescriptor> > GetAllAssetAdministrationShellDescriptorsWithHttpInfo ()
         {
@@ -904,7 +904,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shell Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;AssetAdministrationShellDescriptor&gt;</returns>
         public async System.Threading.Tasks.Task<List<AssetAdministrationShellDescriptor>> GetAllAssetAdministrationShellDescriptorsAsync ()
         {
@@ -916,7 +916,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shell Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;AssetAdministrationShellDescriptor&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AssetAdministrationShellDescriptor>>> GetAllAssetAdministrationShellDescriptorsAsyncWithHttpInfo ()
         {
@@ -964,7 +964,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodel Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>List&lt;SubmodelDescriptor&gt;</returns>
         public List<SubmodelDescriptor> GetAllSubmodelDescriptorsAASRegistry (string aasIdentifier)
@@ -976,7 +976,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodel Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of List&lt;SubmodelDescriptor&gt;</returns>
         public ApiResponse< List<SubmodelDescriptor> > GetAllSubmodelDescriptorsAASRegistryWithHttpInfo (string aasIdentifier)
@@ -1029,7 +1029,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodel Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of List&lt;SubmodelDescriptor&gt;</returns>
         public async System.Threading.Tasks.Task<List<SubmodelDescriptor>> GetAllSubmodelDescriptorsAASRegistryAsync (string aasIdentifier)
@@ -1042,7 +1042,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodel Descriptors 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (List&lt;SubmodelDescriptor&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<SubmodelDescriptor>>> GetAllSubmodelDescriptorsAASRegistryAsyncWithHttpInfo (string aasIdentifier)
@@ -1095,7 +1095,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>AssetAdministrationShellDescriptor</returns>
         public AssetAdministrationShellDescriptor GetAssetAdministrationShellDescriptorById (string aasIdentifier)
@@ -1107,7 +1107,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of AssetAdministrationShellDescriptor</returns>
         public ApiResponse< AssetAdministrationShellDescriptor > GetAssetAdministrationShellDescriptorByIdWithHttpInfo (string aasIdentifier)
@@ -1160,7 +1160,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of AssetAdministrationShellDescriptor</returns>
         public async System.Threading.Tasks.Task<AssetAdministrationShellDescriptor> GetAssetAdministrationShellDescriptorByIdAsync (string aasIdentifier)
@@ -1173,7 +1173,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShellDescriptor)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShellDescriptor>> GetAssetAdministrationShellDescriptorByIdAsyncWithHttpInfo (string aasIdentifier)
@@ -1226,7 +1226,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>SubmodelDescriptor</returns>
@@ -1239,7 +1239,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of SubmodelDescriptor</returns>
@@ -1297,7 +1297,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of SubmodelDescriptor</returns>
@@ -1311,7 +1311,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (SubmodelDescriptor)</returns>
@@ -1369,7 +1369,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>AssetAdministrationShellDescriptor</returns>
         public AssetAdministrationShellDescriptor PostAssetAdministrationShellDescriptor (AssetAdministrationShellDescriptor body)
@@ -1381,7 +1381,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>ApiResponse of AssetAdministrationShellDescriptor</returns>
         public ApiResponse< AssetAdministrationShellDescriptor > PostAssetAdministrationShellDescriptorWithHttpInfo (AssetAdministrationShellDescriptor body)
@@ -1442,7 +1442,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>Task of AssetAdministrationShellDescriptor</returns>
         public async System.Threading.Tasks.Task<AssetAdministrationShellDescriptor> PostAssetAdministrationShellDescriptorAsync (AssetAdministrationShellDescriptor body)
@@ -1455,7 +1455,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShellDescriptor)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShellDescriptor>> PostAssetAdministrationShellDescriptorAsyncWithHttpInfo (AssetAdministrationShellDescriptor body)
@@ -1516,7 +1516,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel Descriptor, i.e. registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>SubmodelDescriptor</returns>
@@ -1529,7 +1529,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel Descriptor, i.e. registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of SubmodelDescriptor</returns>
@@ -1595,7 +1595,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel Descriptor, i.e. registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of SubmodelDescriptor</returns>
@@ -1609,7 +1609,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel Descriptor, i.e. registers a submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (SubmodelDescriptor)</returns>
@@ -1675,7 +1675,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -1687,7 +1687,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1752,7 +1752,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -1765,7 +1765,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1830,7 +1830,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -1843,7 +1843,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -1913,7 +1913,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
@@ -1927,7 +1927,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Submodel Descriptor 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel Descriptor object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>

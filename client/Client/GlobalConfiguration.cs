@@ -16,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace IO.Swagger.Client
+namespace AAS.Client.Client
 {
     /// <summary>
     /// <see cref="GlobalConfiguration"/> provides a compile-time extension point for globally configuring

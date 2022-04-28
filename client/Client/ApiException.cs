@@ -9,7 +9,7 @@
  */
 using System;
 
-namespace IO.Swagger.Client
+namespace AAS.Client.Client
 {
     /// <summary>
     /// API Exception

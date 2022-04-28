@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteAssetAdministrationShellById (string aasIdentifier);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAssetAdministrationShellByIdWithHttpInfo (string aasIdentifier);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>List&lt;AssetAdministrationShell&gt;</returns>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>ApiResponse of List&lt;AssetAdministrationShell&gt;</returns>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>AssetAdministrationShell</returns>
         AssetAdministrationShell GetAssetAdministrationShellById (string aasIdentifier);
@@ -84,7 +84,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of AssetAdministrationShell</returns>
         ApiResponse<AssetAdministrationShell> GetAssetAdministrationShellByIdWithHttpInfo (string aasIdentifier);
@@ -94,7 +94,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>AssetAdministrationShell</returns>
         AssetAdministrationShell PostAssetAdministrationShell (AssetAdministrationShell body);
@@ -105,7 +105,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>ApiResponse of AssetAdministrationShell</returns>
         ApiResponse<AssetAdministrationShell> PostAssetAdministrationShellWithHttpInfo (AssetAdministrationShell body);
@@ -115,7 +115,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -127,7 +127,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -140,7 +140,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteAssetAdministrationShellByIdAsync (string aasIdentifier);
@@ -151,7 +151,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssetAdministrationShellByIdAsyncWithHttpInfo (string aasIdentifier);
@@ -161,7 +161,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>Task of List&lt;AssetAdministrationShell&gt;</returns>
@@ -173,7 +173,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;AssetAdministrationShell&gt;)</returns>
@@ -184,7 +184,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of AssetAdministrationShell</returns>
         System.Threading.Tasks.Task<AssetAdministrationShell> GetAssetAdministrationShellByIdAsync (string aasIdentifier);
@@ -195,7 +195,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShell)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> GetAssetAdministrationShellByIdAsyncWithHttpInfo (string aasIdentifier);
@@ -205,7 +205,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>Task of AssetAdministrationShell</returns>
         System.Threading.Tasks.Task<AssetAdministrationShell> PostAssetAdministrationShellAsync (AssetAdministrationShell body);
@@ -216,7 +216,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShell)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> PostAssetAdministrationShellAsyncWithHttpInfo (AssetAdministrationShell body);
@@ -226,7 +226,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -238,7 +238,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -251,7 +251,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class AssetAdministrationShellRepositoryInterfaceApi : IAssetAdministrationShellRepositoryInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetAdministrationShellRepositoryInterfaceApi"/> class.
@@ -259,9 +259,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellRepositoryInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -270,9 +270,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellRepositoryInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -281,14 +281,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AssetAdministrationShellRepositoryInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public AssetAdministrationShellRepositoryInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -314,12 +314,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -357,7 +357,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteAssetAdministrationShellById (string aasIdentifier)
@@ -368,7 +368,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAssetAdministrationShellByIdWithHttpInfo (string aasIdentifier)
@@ -420,7 +420,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAssetAdministrationShellByIdAsync (string aasIdentifier)
@@ -432,7 +432,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes an Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssetAdministrationShellByIdAsyncWithHttpInfo (string aasIdentifier)
@@ -484,7 +484,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shells 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>List&lt;AssetAdministrationShell&gt;</returns>
@@ -497,7 +497,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shells 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>ApiResponse of List&lt;AssetAdministrationShell&gt;</returns>
@@ -549,7 +549,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shells 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>Task of List&lt;AssetAdministrationShell&gt;</returns>
@@ -563,7 +563,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Asset Administration Shells 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <param name="idShort">The Asset Administration Shell’s IdShort (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;AssetAdministrationShell&gt;)</returns>
@@ -615,7 +615,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>AssetAdministrationShell</returns>
         public AssetAdministrationShell GetAssetAdministrationShellById (string aasIdentifier)
@@ -627,7 +627,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of AssetAdministrationShell</returns>
         public ApiResponse< AssetAdministrationShell > GetAssetAdministrationShellByIdWithHttpInfo (string aasIdentifier)
@@ -680,7 +680,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of AssetAdministrationShell</returns>
         public async System.Threading.Tasks.Task<AssetAdministrationShell> GetAssetAdministrationShellByIdAsync (string aasIdentifier)
@@ -693,7 +693,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShell)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> GetAssetAdministrationShellByIdAsyncWithHttpInfo (string aasIdentifier)
@@ -746,7 +746,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>AssetAdministrationShell</returns>
         public AssetAdministrationShell PostAssetAdministrationShell (AssetAdministrationShell body)
@@ -758,7 +758,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>ApiResponse of AssetAdministrationShell</returns>
         public ApiResponse< AssetAdministrationShell > PostAssetAdministrationShellWithHttpInfo (AssetAdministrationShell body)
@@ -819,7 +819,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>Task of AssetAdministrationShell</returns>
         public async System.Threading.Tasks.Task<AssetAdministrationShell> PostAssetAdministrationShellAsync (AssetAdministrationShell body)
@@ -832,7 +832,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <returns>Task of ApiResponse (AssetAdministrationShell)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> PostAssetAdministrationShellAsyncWithHttpInfo (AssetAdministrationShell body)
@@ -893,7 +893,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
@@ -905,7 +905,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -970,7 +970,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
@@ -983,7 +983,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing Asset Administration Shell 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset Administration Shell object</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>

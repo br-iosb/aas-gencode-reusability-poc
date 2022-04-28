@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteAllAssetLinksById (string aasIdentifier);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAllAssetLinksByIdWithHttpInfo (string aasIdentifier);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>List&lt;string&gt;</returns>
         List<string> GetAllAssetAdministrationShellIdsByAssetLink (List<IdentifierKeyValuePair> assetIds = null);
@@ -61,7 +61,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         ApiResponse<List<string>> GetAllAssetAdministrationShellIdsByAssetLinkWithHttpInfo (List<IdentifierKeyValuePair> assetIds = null);
@@ -71,7 +71,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>List&lt;IdentifierKeyValuePair&gt;</returns>
         List<IdentifierKeyValuePair> GetAllAssetLinksById (string aasIdentifier);
@@ -82,7 +82,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of List&lt;IdentifierKeyValuePair&gt;</returns>
         ApiResponse<List<IdentifierKeyValuePair>> GetAllAssetLinksByIdWithHttpInfo (string aasIdentifier);
@@ -92,7 +92,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>List&lt;IdentifierKeyValuePair&gt;</returns>
@@ -104,7 +104,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of List&lt;IdentifierKeyValuePair&gt;</returns>
@@ -117,7 +117,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteAllAssetLinksByIdAsync (string aasIdentifier);
@@ -128,7 +128,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAllAssetLinksByIdAsyncWithHttpInfo (string aasIdentifier);
@@ -138,7 +138,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         System.Threading.Tasks.Task<List<string>> GetAllAssetAdministrationShellIdsByAssetLinkAsync (List<IdentifierKeyValuePair> assetIds = null);
@@ -149,7 +149,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAllAssetAdministrationShellIdsByAssetLinkAsyncWithHttpInfo (List<IdentifierKeyValuePair> assetIds = null);
@@ -159,7 +159,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of List&lt;IdentifierKeyValuePair&gt;</returns>
         System.Threading.Tasks.Task<List<IdentifierKeyValuePair>> GetAllAssetLinksByIdAsync (string aasIdentifier);
@@ -170,7 +170,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (List&lt;IdentifierKeyValuePair&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<IdentifierKeyValuePair>>> GetAllAssetLinksByIdAsyncWithHttpInfo (string aasIdentifier);
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of List&lt;IdentifierKeyValuePair&gt;</returns>
@@ -192,7 +192,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (List&lt;IdentifierKeyValuePair&gt;)</returns>
@@ -205,7 +205,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class AssetAdministrationShellBasicDiscoveryApi : IAssetAdministrationShellBasicDiscoveryApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetAdministrationShellBasicDiscoveryApi"/> class.
@@ -213,9 +213,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellBasicDiscoveryApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -224,9 +224,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AssetAdministrationShellBasicDiscoveryApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -235,14 +235,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AssetAdministrationShellBasicDiscoveryApi(IO.Swagger.Client.Configuration configuration = null)
+        public AssetAdministrationShellBasicDiscoveryApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -268,12 +268,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -311,7 +311,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteAllAssetLinksById (string aasIdentifier)
@@ -322,7 +322,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAllAssetLinksByIdWithHttpInfo (string aasIdentifier)
@@ -374,7 +374,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAllAssetLinksByIdAsync (string aasIdentifier)
@@ -386,7 +386,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAllAssetLinksByIdAsyncWithHttpInfo (string aasIdentifier)
@@ -438,7 +438,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset Administration Shell ids based on Asset identifier key-value-pairs 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>List&lt;string&gt;</returns>
         public List<string> GetAllAssetAdministrationShellIdsByAssetLink (List<IdentifierKeyValuePair> assetIds = null)
@@ -450,7 +450,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset Administration Shell ids based on Asset identifier key-value-pairs 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         public ApiResponse< List<string> > GetAllAssetAdministrationShellIdsByAssetLinkWithHttpInfo (List<IdentifierKeyValuePair> assetIds = null)
@@ -500,7 +500,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset Administration Shell ids based on Asset identifier key-value-pairs 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
         public async System.Threading.Tasks.Task<List<string>> GetAllAssetAdministrationShellIdsByAssetLinkAsync (List<IdentifierKeyValuePair> assetIds = null)
@@ -513,7 +513,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset Administration Shell ids based on Asset identifier key-value-pairs 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assetIds">The key-value-pair of an Asset identifier (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAllAssetAdministrationShellIdsByAssetLinkAsyncWithHttpInfo (List<IdentifierKeyValuePair> assetIds = null)
@@ -563,7 +563,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset identifier key-value-pairs based on an Asset Administration Shell id to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>List&lt;IdentifierKeyValuePair&gt;</returns>
         public List<IdentifierKeyValuePair> GetAllAssetLinksById (string aasIdentifier)
@@ -575,7 +575,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset identifier key-value-pairs based on an Asset Administration Shell id to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of List&lt;IdentifierKeyValuePair&gt;</returns>
         public ApiResponse< List<IdentifierKeyValuePair> > GetAllAssetLinksByIdWithHttpInfo (string aasIdentifier)
@@ -628,7 +628,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset identifier key-value-pairs based on an Asset Administration Shell id to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of List&lt;IdentifierKeyValuePair&gt;</returns>
         public async System.Threading.Tasks.Task<List<IdentifierKeyValuePair>> GetAllAssetLinksByIdAsync (string aasIdentifier)
@@ -641,7 +641,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of Asset identifier key-value-pairs based on an Asset Administration Shell id to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (List&lt;IdentifierKeyValuePair&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<IdentifierKeyValuePair>>> GetAllAssetLinksByIdAsyncWithHttpInfo (string aasIdentifier)
@@ -694,7 +694,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>List&lt;IdentifierKeyValuePair&gt;</returns>
@@ -707,7 +707,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of List&lt;IdentifierKeyValuePair&gt;</returns>
@@ -773,7 +773,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of List&lt;IdentifierKeyValuePair&gt;</returns>
@@ -787,7 +787,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates all Asset identifier key-value-pair linked to an Asset Administration Shell to edit discoverable content 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Asset identifier key-value-pairs</param>
         /// <param name="aasIdentifier">The Asset Administration Shell’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (List&lt;IdentifierKeyValuePair&gt;)</returns>

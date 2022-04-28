@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns></returns>
         void DeleteSubmodelElementByPath (string idShortPath);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSubmodelElementByPathWithHttpInfo (string idShortPath);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -75,7 +75,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -88,7 +88,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -100,7 +100,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -125,7 +125,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -139,7 +139,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -152,7 +152,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -166,7 +166,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -179,7 +179,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -193,7 +193,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -206,7 +206,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -221,7 +221,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -235,7 +235,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -249,7 +249,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -262,7 +262,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -277,7 +277,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -293,7 +293,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteSubmodelElementByPathAsync (string idShortPath);
@@ -304,7 +304,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubmodelElementByPathAsyncWithHttpInfo (string idShortPath);
@@ -314,7 +314,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -327,7 +327,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -339,7 +339,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -352,7 +352,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -364,7 +364,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -377,7 +377,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -389,7 +389,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -403,7 +403,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -416,7 +416,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -430,7 +430,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -443,7 +443,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -457,7 +457,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -470,7 +470,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -485,7 +485,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -499,7 +499,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -513,7 +513,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -526,7 +526,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -541,7 +541,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -557,7 +557,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class SubmodelInterfaceApi : ISubmodelInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SubmodelInterfaceApi"/> class.
@@ -565,9 +565,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public SubmodelInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -576,9 +576,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public SubmodelInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -587,14 +587,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SubmodelInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public SubmodelInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -620,12 +620,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -663,7 +663,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a submodel element at a specified path within the submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns></returns>
         public void DeleteSubmodelElementByPath (string idShortPath)
@@ -674,7 +674,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a submodel element at a specified path within the submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSubmodelElementByPathWithHttpInfo (string idShortPath)
@@ -726,7 +726,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a submodel element at a specified path within the submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteSubmodelElementByPathAsync (string idShortPath)
@@ -738,7 +738,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a submodel element at a specified path within the submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubmodelElementByPathAsyncWithHttpInfo (string idShortPath)
@@ -790,7 +790,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel elements including their hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -804,7 +804,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel elements including their hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -858,7 +858,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel elements including their hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -873,7 +873,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all submodel elements including their hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -927,7 +927,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Operation result of an asynchronous invoked Operation 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -941,7 +941,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Operation result of an asynchronous invoked Operation 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -1001,7 +1001,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Operation result of an asynchronous invoked Operation 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -1016,7 +1016,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Operation result of an asynchronous invoked Operation 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="handleId">The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (BASE64-URL-encoded)</param>
         /// <param name="content"> (optional, default to normal)</param>
@@ -1076,7 +1076,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -1090,7 +1090,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -1144,7 +1144,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -1159,7 +1159,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
         /// <param name="extent">Determines to which extent the resource is being serialized (optional)</param>
@@ -1213,7 +1213,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific submodel element from the Submodel at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1228,7 +1228,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific submodel element from the Submodel at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1287,7 +1287,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific submodel element from the Submodel at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1303,7 +1303,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific submodel element from the Submodel at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1362,7 +1362,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Synchronously or asynchronously invokes an Operation at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -1377,7 +1377,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Synchronously or asynchronously invokes an Operation at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -1447,7 +1447,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Synchronously or asynchronously invokes an Operation at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -1463,7 +1463,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Synchronously or asynchronously invokes an Operation at a specified path 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Operation request object</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated), in this case an operation</param>
         /// <param name="async">Determines whether an operation invocation is performed asynchronously or synchronously (optional, default to false)</param>
@@ -1533,7 +1533,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1548,7 +1548,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1615,7 +1615,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1631,7 +1631,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1698,7 +1698,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -1714,7 +1714,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -1786,7 +1786,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -1803,7 +1803,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -1875,7 +1875,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1889,7 +1889,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1955,7 +1955,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -1970,7 +1970,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
         /// <param name="content">Determines the request or response kind of the resource (optional, default to normal)</param>
@@ -2036,7 +2036,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -2051,7 +2051,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -2122,7 +2122,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>
@@ -2138,7 +2138,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates an existing submodel element at a specified path within submodel elements hierarchy 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested submodel element</param>
         /// <param name="idShortPath">IdShort path to the submodel element (dot-separated)</param>
         /// <param name="level">Determines the structural depth of the respective resource content (optional, default to deep)</param>

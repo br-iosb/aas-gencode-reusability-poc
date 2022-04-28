@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteSubmodelById (string submodelIdentifier);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSubmodelByIdWithHttpInfo (string submodelIdentifier);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>List&lt;Submodel&gt;</returns>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>ApiResponse of List&lt;Submodel&gt;</returns>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Submodel</returns>
         Submodel GetSubmodelById (string submodelIdentifier);
@@ -84,7 +84,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Submodel</returns>
         ApiResponse<Submodel> GetSubmodelByIdWithHttpInfo (string submodelIdentifier);
@@ -94,7 +94,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>Submodel</returns>
         Submodel PostSubmodel (Submodel body);
@@ -105,7 +105,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>ApiResponse of Submodel</returns>
         ApiResponse<Submodel> PostSubmodelWithHttpInfo (Submodel body);
@@ -115,7 +115,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Submodel</returns>
@@ -127,7 +127,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Submodel</returns>
@@ -140,7 +140,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteSubmodelByIdAsync (string submodelIdentifier);
@@ -151,7 +151,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubmodelByIdAsyncWithHttpInfo (string submodelIdentifier);
@@ -161,7 +161,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>Task of List&lt;Submodel&gt;</returns>
@@ -173,7 +173,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Submodel&gt;)</returns>
@@ -184,7 +184,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of Submodel</returns>
         System.Threading.Tasks.Task<Submodel> GetSubmodelByIdAsync (string submodelIdentifier);
@@ -195,7 +195,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (Submodel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Submodel>> GetSubmodelByIdAsyncWithHttpInfo (string submodelIdentifier);
@@ -205,7 +205,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>Task of Submodel</returns>
         System.Threading.Tasks.Task<Submodel> PostSubmodelAsync (Submodel body);
@@ -216,7 +216,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>Task of ApiResponse (Submodel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Submodel>> PostSubmodelAsyncWithHttpInfo (Submodel body);
@@ -226,7 +226,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of Submodel</returns>
@@ -238,7 +238,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (Submodel)</returns>
@@ -251,7 +251,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class SubmodelRepositoryInterfaceApi : ISubmodelRepositoryInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SubmodelRepositoryInterfaceApi"/> class.
@@ -259,9 +259,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public SubmodelRepositoryInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -270,9 +270,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public SubmodelRepositoryInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -281,14 +281,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SubmodelRepositoryInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public SubmodelRepositoryInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -314,12 +314,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -357,7 +357,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteSubmodelById (string submodelIdentifier)
@@ -368,7 +368,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteSubmodelByIdWithHttpInfo (string submodelIdentifier)
@@ -420,7 +420,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteSubmodelByIdAsync (string submodelIdentifier)
@@ -432,7 +432,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubmodelByIdAsyncWithHttpInfo (string submodelIdentifier)
@@ -484,7 +484,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodels 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>List&lt;Submodel&gt;</returns>
@@ -497,7 +497,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodels 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>ApiResponse of List&lt;Submodel&gt;</returns>
@@ -549,7 +549,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodels 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>Task of List&lt;Submodel&gt;</returns>
@@ -563,7 +563,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns all Submodels 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="semanticId">The value of the semantic id reference (BASE64-URL-encoded) (optional)</param>
         /// <param name="idShort">The Submodel’s idShort (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Submodel&gt;)</returns>
@@ -615,7 +615,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Submodel</returns>
         public Submodel GetSubmodelById (string submodelIdentifier)
@@ -627,7 +627,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Submodel</returns>
         public ApiResponse< Submodel > GetSubmodelByIdWithHttpInfo (string submodelIdentifier)
@@ -680,7 +680,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of Submodel</returns>
         public async System.Threading.Tasks.Task<Submodel> GetSubmodelByIdAsync (string submodelIdentifier)
@@ -693,7 +693,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (Submodel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Submodel>> GetSubmodelByIdAsyncWithHttpInfo (string submodelIdentifier)
@@ -746,7 +746,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>Submodel</returns>
         public Submodel PostSubmodel (Submodel body)
@@ -758,7 +758,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>ApiResponse of Submodel</returns>
         public ApiResponse< Submodel > PostSubmodelWithHttpInfo (Submodel body)
@@ -819,7 +819,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>Task of Submodel</returns>
         public async System.Threading.Tasks.Task<Submodel> PostSubmodelAsync (Submodel body)
@@ -832,7 +832,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <returns>Task of ApiResponse (Submodel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Submodel>> PostSubmodelAsyncWithHttpInfo (Submodel body)
@@ -893,7 +893,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new or updates an existing Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Submodel</returns>
@@ -906,7 +906,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new or updates an existing Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Submodel</returns>
@@ -972,7 +972,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new or updates an existing Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of Submodel</returns>
@@ -986,7 +986,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Creates a new or updates an existing Submodel 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Submodel object</param>
         /// <param name="submodelIdentifier">The Submodel’s unique id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (Submodel)</returns>

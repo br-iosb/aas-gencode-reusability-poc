@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         void DeleteAASXByPackageId (string packageId);
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAASXByPackageIdWithHttpInfo (string packageId);
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>byte[]</returns>
         byte[] GetAASXByPackageId (string packageId);
@@ -61,7 +61,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> GetAASXByPackageIdWithHttpInfo (string packageId);
@@ -71,7 +71,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>List&lt;PackageDescription&gt;</returns>
         List<PackageDescription> GetAllAASXPackageIds (string aasId = null);
@@ -82,7 +82,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>ApiResponse of List&lt;PackageDescription&gt;</returns>
         ApiResponse<List<PackageDescription>> GetAllAASXPackageIdsWithHttpInfo (string aasId = null);
@@ -92,7 +92,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -105,7 +105,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -117,7 +117,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -131,7 +131,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -146,7 +146,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteAASXByPackageIdAsync (string packageId);
@@ -157,7 +157,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAASXByPackageIdAsyncWithHttpInfo (string packageId);
@@ -167,7 +167,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> GetAASXByPackageIdAsync (string packageId);
@@ -178,7 +178,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> GetAASXByPackageIdAsyncWithHttpInfo (string packageId);
@@ -188,7 +188,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>Task of List&lt;PackageDescription&gt;</returns>
         System.Threading.Tasks.Task<List<PackageDescription>> GetAllAASXPackageIdsAsync (string aasId = null);
@@ -199,7 +199,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;PackageDescription&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PackageDescription>>> GetAllAASXPackageIdsAsyncWithHttpInfo (string aasId = null);
@@ -209,7 +209,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -222,7 +222,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -234,7 +234,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -248,7 +248,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -263,7 +263,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class AASXFileServerInterfaceApi : IAASXFileServerInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AASXFileServerInterfaceApi"/> class.
@@ -271,9 +271,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AASXFileServerInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -282,9 +282,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public AASXFileServerInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -293,14 +293,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AASXFileServerInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public AASXFileServerInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -326,12 +326,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -369,7 +369,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns></returns>
         public void DeleteAASXByPackageId (string packageId)
@@ -380,7 +380,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAASXByPackageIdWithHttpInfo (string packageId)
@@ -432,7 +432,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAASXByPackageIdAsync (string packageId)
@@ -444,7 +444,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Deletes a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The Package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAASXByPackageIdAsyncWithHttpInfo (string packageId)
@@ -496,7 +496,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>byte[]</returns>
         public byte[] GetAASXByPackageId (string packageId)
@@ -508,7 +508,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > GetAASXByPackageIdWithHttpInfo (string packageId)
@@ -561,7 +561,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> GetAASXByPackageIdAsync (string packageId)
@@ -574,7 +574,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a specific AASX package from the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">The package Id (BASE64-URL-encoded)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> GetAASXByPackageIdAsyncWithHttpInfo (string packageId)
@@ -627,7 +627,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of available AASX packages at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>List&lt;PackageDescription&gt;</returns>
         public List<PackageDescription> GetAllAASXPackageIds (string aasId = null)
@@ -639,7 +639,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of available AASX packages at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>ApiResponse of List&lt;PackageDescription&gt;</returns>
         public ApiResponse< List<PackageDescription> > GetAllAASXPackageIdsWithHttpInfo (string aasId = null)
@@ -689,7 +689,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of available AASX packages at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>Task of List&lt;PackageDescription&gt;</returns>
         public async System.Threading.Tasks.Task<List<PackageDescription>> GetAllAASXPackageIdsAsync (string aasId = null)
@@ -702,7 +702,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns a list of available AASX packages at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasId">The Asset Administration Shell’s unique id (BASE64-URL-encoded) (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;PackageDescription&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<PackageDescription>>> GetAllAASXPackageIdsAsyncWithHttpInfo (string aasId = null)
@@ -752,7 +752,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Stores the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -766,7 +766,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Stores the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -830,7 +830,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Stores the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -845,7 +845,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Stores the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -909,7 +909,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -923,7 +923,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -991,7 +991,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>
@@ -1006,7 +1006,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Updates the AASX package at the server 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="aasIds"></param>
         /// <param name="file"></param>
         /// <param name="fileName"></param>

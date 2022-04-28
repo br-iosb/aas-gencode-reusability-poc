@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using AAS.Client.Client;
+using AAS.Client.Model;
 
-namespace IO.Swagger.Api
+namespace AAS.Client.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Descriptor&gt;</returns>
         List<Descriptor> GetDescriptor ();
 
@@ -39,7 +39,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Descriptor&gt;</returns>
         ApiResponse<List<Descriptor>> GetDescriptorWithHttpInfo ();
         #endregion Synchronous Operations
@@ -50,7 +50,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Descriptor&gt;</returns>
         System.Threading.Tasks.Task<List<Descriptor>> GetDescriptorAsync ();
 
@@ -60,7 +60,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Descriptor&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Descriptor>>> GetDescriptorAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
@@ -71,7 +71,7 @@ namespace IO.Swagger.Api
     /// </summary>
         public partial class DescriptorInterfaceApi : IDescriptorInterfaceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AAS.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DescriptorInterfaceApi"/> class.
@@ -79,9 +79,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public DescriptorInterfaceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new AAS.Client.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -90,9 +90,9 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public DescriptorInterfaceApi()
         {
-            this.Configuration = IO.Swagger.Client.Configuration.Default;
+            this.Configuration = AAS.Client.Client.Configuration.Default;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -101,14 +101,14 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public DescriptorInterfaceApi(IO.Swagger.Client.Configuration configuration = null)
+        public DescriptorInterfaceApi(AAS.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = AAS.Client.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = AAS.Client.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -134,12 +134,12 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public AAS.Client.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public AAS.Client.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -177,7 +177,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the self-describing information of a network resource (Descriptor) 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Descriptor&gt;</returns>
         public List<Descriptor> GetDescriptor ()
         {
@@ -188,7 +188,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the self-describing information of a network resource (Descriptor) 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Descriptor&gt;</returns>
         public ApiResponse< List<Descriptor> > GetDescriptorWithHttpInfo ()
         {
@@ -236,7 +236,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the self-describing information of a network resource (Descriptor) 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Descriptor&gt;</returns>
         public async System.Threading.Tasks.Task<List<Descriptor>> GetDescriptorAsync ()
         {
@@ -248,7 +248,7 @@ namespace IO.Swagger.Api
         /// <summary>
         /// Returns the self-describing information of a network resource (Descriptor) 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AAS.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Descriptor&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Descriptor>>> GetDescriptorAsyncWithHttpInfo ()
         {
