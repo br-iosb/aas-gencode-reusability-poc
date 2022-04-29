@@ -34,7 +34,7 @@ namespace AAS.Client.Model
         /// </summary>
         /// <param name="value">value.</param>
         /// <param name="valueId">valueId.</param>
-        public MultiLanguageProperty(List<LangString> value = default(List<LangString>), Reference valueId = default(Reference), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public MultiLanguageProperty(List<LangString> value = default(List<LangString>), Reference valueId = default(Reference), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             this.Value = value;
             this.ValueId = valueId;

@@ -36,7 +36,7 @@ namespace AAS.Client.Model
         /// <param name="submodelElementTypeValues">submodelElementTypeValues.</param>
         /// <param name="value">value.</param>
         /// <param name="valueTypeValues">valueTypeValues.</param>
-        public SubmodelElementList(Reference semanticIdValues = default(Reference), ModelType submodelElementTypeValues = default(ModelType), List<SubmodelElement> value = default(List<SubmodelElement>), ValueTypeEnum valueTypeValues = default(ValueTypeEnum), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public SubmodelElementList(Reference semanticIdValues = default(Reference), ModelType submodelElementTypeValues = default(ModelType), List<SubmodelElement> value = default(List<SubmodelElement>), ValueTypeEnum valueTypeValues = default(ValueTypeEnum), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             this.SemanticIdValues = semanticIdValues;
             this.SubmodelElementTypeValues = submodelElementTypeValues;

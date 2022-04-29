@@ -34,7 +34,7 @@ namespace AAS.Client.Model
         /// </summary>
         /// <param name="mimeType">mimeType (required).</param>
         /// <param name="value">value.</param>
-        public Blob(string mimeType = default(string), string value = default(string), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public Blob(string mimeType = default(string), string value = default(string), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             // to ensure "mimeType" is required (not null)
             if (mimeType == null)

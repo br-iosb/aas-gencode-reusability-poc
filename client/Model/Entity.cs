@@ -36,7 +36,7 @@ namespace AAS.Client.Model
         /// <param name="globalAssetId">globalAssetId.</param>
         /// <param name="specificAssetIds">specificAssetIds.</param>
         /// <param name="statements">statements.</param>
-        public Entity(EntityType entityType = default(EntityType), Reference globalAssetId = default(Reference), List<IdentifierKeyValuePair> specificAssetIds = default(List<IdentifierKeyValuePair>), List<SubmodelElement> statements = default(List<SubmodelElement>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public Entity(EntityType entityType = default(EntityType), Reference globalAssetId = default(Reference), List<IdentifierKeyValuePair> specificAssetIds = default(List<IdentifierKeyValuePair>), List<SubmodelElement> statements = default(List<SubmodelElement>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             // to ensure "entityType" is required (not null)
             if (entityType == null)

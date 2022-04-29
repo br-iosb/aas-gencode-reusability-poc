@@ -35,7 +35,7 @@ namespace AAS.Client.Model
         /// <param name="inoutputVariable">inoutputVariable.</param>
         /// <param name="inputVariable">inputVariable.</param>
         /// <param name="outputVariable">outputVariable.</param>
-        public Operation(List<OperationVariable> inoutputVariable = default(List<OperationVariable>), List<OperationVariable> inputVariable = default(List<OperationVariable>), List<OperationVariable> outputVariable = default(List<OperationVariable>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public Operation(List<OperationVariable> inoutputVariable = default(List<OperationVariable>), List<OperationVariable> inputVariable = default(List<OperationVariable>), List<OperationVariable> outputVariable = default(List<OperationVariable>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             this.InoutputVariable = inoutputVariable;
             this.InputVariable = inputVariable;

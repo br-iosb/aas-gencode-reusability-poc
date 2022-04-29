@@ -33,7 +33,7 @@ namespace AAS.Client.Model
         /// Initializes a new instance of the <see cref="ReferenceElement" /> class.
         /// </summary>
         /// <param name="value">value.</param>
-        public ReferenceElement(Reference value = default(Reference), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public ReferenceElement(Reference value = default(Reference), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             this.Value = value;
         }

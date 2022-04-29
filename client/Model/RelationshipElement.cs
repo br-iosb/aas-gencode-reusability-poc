@@ -34,7 +34,7 @@ namespace AAS.Client.Model
         /// </summary>
         /// <param name="first">first (required).</param>
         /// <param name="second">second (required).</param>
-        public RelationshipElement(Reference first = default(Reference), Reference second = default(Reference), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public RelationshipElement(Reference first = default(Reference), Reference second = default(Reference), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             // to ensure "first" is required (not null)
             if (first == null)

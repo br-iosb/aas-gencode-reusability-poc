@@ -35,7 +35,7 @@ namespace AAS.Client.Model
         /// <param name="max">max.</param>
         /// <param name="min">min.</param>
         /// <param name="valueType">valueType (required).</param>
-        public Range(string max = default(string), string min = default(string), ValueTypeEnum valueType = default(ValueTypeEnum), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public Range(string max = default(string), string min = default(string), ValueTypeEnum valueType = default(ValueTypeEnum), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(kind, embeddedDataSpecifications, semanticId, qualifiers)
         {
             // to ensure "valueType" is required (not null)
             if (valueType == null)
