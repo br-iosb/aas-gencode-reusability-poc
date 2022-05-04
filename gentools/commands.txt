@@ -1,0 +1,18 @@
+docker pull swaggerapi/swagger-codegen-cli-v3:3.0.34
+
+//this should list "aspnetcore", "csharp" and "csharp-dotnet2"
+docker run --rm swaggerapi/swagger-codegen-cli-v3:3.0.34 langs
+//csharp-dotnet2 seems deprecated
+
+//list options for provided generators
+docker run --rm swaggerapi/swagger-codegen-cli-v3:3.0.34 config-help -l aspnetcore
+docker run --rm swaggerapi/swagger-codegen-cli-v3:3.0.34 config-help -l csharp
+
+
+//default generation
+docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i in/Plattform_i40-AssetAdministrationShell-Repository-V1.0RC01-resolved.json -l aspnetcore -o /out/aspnetcore
+docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i in/Plattform_i40-AssetAdministrationShell-Repository-V1.0RC01-resolved.json -l csharp -o /out/csharp
+
+//specify package in config, and more
+docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i /in/Plattform_i40-AssetAdministrationShell-Repository-V1.0RC01-resolved.json -l aspnetcore -o /out/aspnetcore -c /in/config_aspnetcore.json
+docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i /in/Plattform_i40-AssetAdministrationShell-Repository-V1.0RC01-resolved.json -l csharp -o /out/csharp -c /in/config_csharp.json

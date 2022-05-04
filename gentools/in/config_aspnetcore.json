@@ -1,0 +1,4 @@
+{
+    "packageName" : "AAS.OpenApi.Server",
+    "interface-controller" : true
+}
