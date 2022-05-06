@@ -16,3 +16,8 @@ docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-c
 //specify package in config, and more
 docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i /in/Plattform_i40-AssetAdministrationShell-Repository-V1.0RC01-resolved.json -l aspnetcore -o /out/aspnetcore -c /in/config_aspnetcore.json
 docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i /in/Plattform_i40-AssetAdministrationShell-Repository-V1.0RC01-resolved.json -l csharp -o /out/csharp -c /in/config_csharp.json
+
+
+//updated json Plattform_i40-Entire-Interface-Collection-V1.0RC01-resolved.json
+docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i /in/Plattform_i40-Entire-Interface-Collection-V1.0RC01-resolved.json -l aspnetcore -o /out/aspnetcore -c /in/config_aspnetcore.json
+docker run --rm --volume $PWD/in:/in --volume $PWD/out:/out swaggerapi/swagger-codegen-cli-v3:3.0.34 generate -i /in/Plattform_i40-Entire-Interface-Collection-V1.0RC01-resolved.json -l csharp -o /out/csharp -c /in/config_csharp.json
