@@ -33,7 +33,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="qualifiers">qualifiers.</param>
         /// <param name="permissionsPerObject">permissionsPerObject.</param>
         /// <param name="targetSubjectAttributes">targetSubjectAttributes (required).</param>
-        public AccessPermissionRule(List<Constraint> qualifiers = default(List<Constraint>), List<PermissionsPerObject> permissionsPerObject = default(List<PermissionsPerObject>), List<SubjectAttributes> targetSubjectAttributes = default(List<SubjectAttributes>), List<Constraint> qualifiers = default(List<Constraint>), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
+        public AccessPermissionRule(List<Constraint> qualifiers = default(List<Constraint>), List<PermissionsPerObject> permissionsPerObject = default(List<PermissionsPerObject>), List<SubjectAttributes> targetSubjectAttributes = default(List<SubjectAttributes>), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
         {
             // to ensure "targetSubjectAttributes" is required (not null)
             if (targetSubjectAttributes == null)

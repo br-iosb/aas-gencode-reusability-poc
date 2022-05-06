@@ -35,7 +35,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="semanticId">semanticId.</param>
         /// <param name="kind">kind.</param>
         /// <param name="submodelElements">submodelElements.</param>
-        public Submodel(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), List<Constraint> qualifiers = default(List<Constraint>), Reference semanticId = default(Reference), ModelingKind kind = default(ModelingKind), List<SubmodelElement> submodelElements = default(List<SubmodelElement>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
+        public Submodel(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), List<Constraint> qualifiers = default(List<Constraint>), Reference semanticId = default(Reference), ModelingKind kind = default(ModelingKind), List<SubmodelElement> submodelElements = default(List<SubmodelElement>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
         {
             this.EmbeddedDataSpecifications = embeddedDataSpecifications;
             this.Qualifiers = qualifiers;

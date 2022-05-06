@@ -32,7 +32,7 @@ namespace AAS.OpenApi.Client.Model
         /// </summary>
         /// <param name="embeddedDataSpecifications">embeddedDataSpecifications.</param>
         /// <param name="isCaseOf">isCaseOf.</param>
-        public ConceptDescription(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), List<Reference> isCaseOf = default(List<Reference>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
+        public ConceptDescription(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), List<Reference> isCaseOf = default(List<Reference>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
         {
             this.EmbeddedDataSpecifications = embeddedDataSpecifications;
             this.IsCaseOf = isCaseOf;

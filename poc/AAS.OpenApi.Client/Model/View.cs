@@ -33,7 +33,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="embeddedDataSpecifications">embeddedDataSpecifications.</param>
         /// <param name="semanticId">semanticId.</param>
         /// <param name="containedElements">containedElements.</param>
-        public View(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Reference> containedElements = default(List<Reference>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
+        public View(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Reference> containedElements = default(List<Reference>), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
         {
             this.EmbeddedDataSpecifications = embeddedDataSpecifications;
             this.SemanticId = semanticId;

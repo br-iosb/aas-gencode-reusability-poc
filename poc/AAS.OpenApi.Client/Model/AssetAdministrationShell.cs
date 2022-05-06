@@ -36,7 +36,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="security">security.</param>
         /// <param name="submodels">submodels.</param>
         /// <param name="views">views.</param>
-        public AssetAdministrationShell(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AssetInformation assetInformation = default(AssetInformation), ModelReference derivedFrom = default(ModelReference), Security security = default(Security), List<ModelReference> submodels = default(List<ModelReference>), List<View> views = default(List<View>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
+        public AssetAdministrationShell(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AssetInformation assetInformation = default(AssetInformation), ModelReference derivedFrom = default(ModelReference), Security security = default(Security), List<ModelReference> submodels = default(List<ModelReference>), List<View> views = default(List<View>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
         {
             // to ensure "assetInformation" is required (not null)
             if (assetInformation == null)
