@@ -2715,7 +2715,7 @@
                 "$ref": "#/components/schemas/AssetInformation"
               },
               "derivedFrom": {
-                "$ref": "#/components/schemas/Reference"
+                "$ref": "#/components/schemas/ModelReference"
               },
               "security": {
                 "$ref": "#/components/schemas/Security"
@@ -2723,7 +2723,7 @@
               "submodels": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Reference"
+                  "$ref": "#/components/schemas/ModelReference"
                 }
               },
               "views": {
@@ -4150,7 +4150,7 @@
             }
           }
         },
-        "example": "{  \"endpoints\": [{ \"protocolInformation\": { \"endpointAddress\": \"https://localhost:1234\", \"endpointProtocolVersion: \"1.1\"  }, \"interface\": \"AAS-1.0\"  }, { \"protocolInformation\": {  \"endpointAddress\": \"opc.tcp://localhost:4840\" },    \"interface\": \"AAS-1.0\" }, {  \"protocolInformation\": { \"endpointAddress\": \"https://localhost:5678\",  \"endpointProtocolVersion: \"1.1\", \"subprotocol\": \"OPC UA Basic SOAP\", \"subprotocolBody\": \"ns=2;s=MyAAS\", \"subprotocolBodyEncoding\": \"plain\"  }, \"interface\": \"AAS-1.0\"  }] }"
+        "example": "{  \"endpoints\": [{ \"protocolInformation\": { \"endpointAddress\": \"https://localhost:1234\", \"endpointProtocolVersion\": \"1.1\"  }, \"interface\": \"AAS-1.0\"  }, { \"protocolInformation\": {  \"endpointAddress\": \"opc.tcp://localhost:4840\" },    \"interface\": \"AAS-1.0\" }, {  \"protocolInformation\": { \"endpointAddress\": \"https://localhost:5678\",  \"endpointProtocolVersion\": \"1.1\", \"subprotocol\": \"OPC UA Basic SOAP\", \"subprotocolBody\": \"ns=2;s=MyAAS\", \"subprotocolBodyEncoding\": \"plain\"  }, \"interface\": \"AAS-1.0\"  }] }"
       },
       "Endpoint": {
         "required": [
