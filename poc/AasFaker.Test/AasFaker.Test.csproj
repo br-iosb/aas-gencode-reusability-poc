@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AasFaker\AasFaker.csproj" />
+    <ProjectReference Include="..\core\core.csproj" />
   </ItemGroup>
 
 </Project>
