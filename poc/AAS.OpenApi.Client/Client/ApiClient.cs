@@ -25,7 +25,7 @@ namespace AAS.OpenApi.Client.Client
     /// <summary>
     /// API client is mainly responsible for making the HTTP call to the API backend.
     /// </summary>
-    public partial class ApiClient
+    public partial class ApiClient //hint partial class
     {
         private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {
@@ -36,14 +36,14 @@ namespace AAS.OpenApi.Client.Client
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
-        partial void InterceptRequest(IRestRequest request);
+        partial void InterceptRequest(IRestRequest request);  //hint partial method
 
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
         /// <param name="response">The RestSharp response object</param>
-        partial void InterceptResponse(IRestRequest request, IRestResponse response);
+        partial void InterceptResponse(IRestRequest request, IRestResponse response); //hint partial method
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
@@ -106,7 +106,7 @@ namespace AAS.OpenApi.Client.Client
         public RestClient RestClient { get; set; }
 
         // Creates and sets up a RestRequest prior to a call.
-        private RestRequest PrepareRequest(
+        private RestRequest PrepadreRequest(
             String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
