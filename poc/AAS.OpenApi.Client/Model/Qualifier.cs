@@ -36,7 +36,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="valueId">valueId.</param>
         /// <param name="valueType">valueType.</param>
         /// <param name="type">type (required).</param>
-        public Qualifier(string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), string type = default(string), string value = default(string), Reference semanticId = default(Reference)) : base(semanticId)
+        public Qualifier(string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), string type = default(string), Reference semanticId = default(Reference)) : base(semanticId)
         {
             // to ensure "type" is required (not null)
             if (type == null)
