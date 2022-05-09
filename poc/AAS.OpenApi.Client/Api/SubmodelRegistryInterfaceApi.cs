@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -369,7 +369,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling SubmodelRegistryInterfaceApi->DeleteSubmodelDescriptorById");
 
-            var localVarPath = "./registry/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -405,7 +405,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -433,7 +433,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling SubmodelRegistryInterfaceApi->DeleteSubmodelDescriptorById");
 
-            var localVarPath = "./registry/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -469,7 +469,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -492,7 +492,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<SubmodelDescriptor> > GetAllSubmodelDescriptorsWithHttpInfo ()
         {
 
-            var localVarPath = "./registry/submodel-descriptors";
+            var localVarPath = "/registry/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -528,7 +528,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<SubmodelDescriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SubmodelDescriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SubmodelDescriptor>)));
         }
 
@@ -552,7 +552,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SubmodelDescriptor>>> GetAllSubmodelDescriptorsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "./registry/submodel-descriptors";
+            var localVarPath = "/registry/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -588,7 +588,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<SubmodelDescriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SubmodelDescriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SubmodelDescriptor>)));
         }
 
@@ -616,7 +616,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling SubmodelRegistryInterfaceApi->GetSubmodelDescriptorById");
 
-            var localVarPath = "./registry/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -653,7 +653,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -682,7 +682,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling SubmodelRegistryInterfaceApi->GetSubmodelDescriptorById");
 
-            var localVarPath = "./registry/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -719,7 +719,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -747,7 +747,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SubmodelRegistryInterfaceApi->PostSubmodelDescriptor");
 
-            var localVarPath = "./registry/submodel-descriptors";
+            var localVarPath = "/registry/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -792,7 +792,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -821,7 +821,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SubmodelRegistryInterfaceApi->PostSubmodelDescriptor");
 
-            var localVarPath = "./registry/submodel-descriptors";
+            var localVarPath = "/registry/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -866,7 +866,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -898,7 +898,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling SubmodelRegistryInterfaceApi->PutSubmodelDescriptorById");
 
-            var localVarPath = "./registry/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -943,7 +943,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -976,7 +976,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling SubmodelRegistryInterfaceApi->PutSubmodelDescriptorById");
 
-            var localVarPath = "./registry/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1021,7 +1021,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

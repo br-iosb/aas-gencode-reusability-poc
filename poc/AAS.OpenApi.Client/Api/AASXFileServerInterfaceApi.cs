@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -389,7 +389,7 @@ namespace AAS.OpenApi.Client.Api
             if (packageId == null)
                 throw new ApiException(400, "Missing required parameter 'packageId' when calling AASXFileServerInterfaceApi->DeleteAASXByPackageId");
 
-            var localVarPath = "./packages/{packageId}";
+            var localVarPath = "/packages/{packageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -425,7 +425,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -453,7 +453,7 @@ namespace AAS.OpenApi.Client.Api
             if (packageId == null)
                 throw new ApiException(400, "Missing required parameter 'packageId' when calling AASXFileServerInterfaceApi->DeleteAASXByPackageId");
 
-            var localVarPath = "./packages/{packageId}";
+            var localVarPath = "/packages/{packageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -489,7 +489,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -517,7 +517,7 @@ namespace AAS.OpenApi.Client.Api
             if (packageId == null)
                 throw new ApiException(400, "Missing required parameter 'packageId' when calling AASXFileServerInterfaceApi->GetAASXByPackageId");
 
-            var localVarPath = "./packages/{packageId}";
+            var localVarPath = "/packages/{packageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -554,7 +554,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<byte[]>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
@@ -583,7 +583,7 @@ namespace AAS.OpenApi.Client.Api
             if (packageId == null)
                 throw new ApiException(400, "Missing required parameter 'packageId' when calling AASXFileServerInterfaceApi->GetAASXByPackageId");
 
-            var localVarPath = "./packages/{packageId}";
+            var localVarPath = "/packages/{packageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<byte[]>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
@@ -645,7 +645,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<PackageDescription> > GetAllAASXPackageIdsWithHttpInfo (string aasId = null)
         {
 
-            var localVarPath = "./packages";
+            var localVarPath = "/packages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -682,7 +682,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<PackageDescription>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<PackageDescription>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageDescription>)));
         }
 
@@ -708,7 +708,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<PackageDescription>>> GetAllAASXPackageIdsAsyncWithHttpInfo (string aasId = null)
         {
 
-            var localVarPath = "./packages";
+            var localVarPath = "/packages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -745,7 +745,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<PackageDescription>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<PackageDescription>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageDescription>)));
         }
 
@@ -783,7 +783,7 @@ namespace AAS.OpenApi.Client.Api
             if (fileName == null)
                 throw new ApiException(400, "Missing required parameter 'fileName' when calling AASXFileServerInterfaceApi->PostAASXPackage");
 
-            var localVarPath = "./packages";
+            var localVarPath = "/packages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -823,7 +823,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<PackageDescription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PackageDescription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PackageDescription)));
         }
 
@@ -862,7 +862,7 @@ namespace AAS.OpenApi.Client.Api
             if (fileName == null)
                 throw new ApiException(400, "Missing required parameter 'fileName' when calling AASXFileServerInterfaceApi->PostAASXPackage");
 
-            var localVarPath = "./packages";
+            var localVarPath = "/packages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -902,7 +902,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<PackageDescription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (PackageDescription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PackageDescription)));
         }
 
@@ -944,7 +944,7 @@ namespace AAS.OpenApi.Client.Api
             if (packageId == null)
                 throw new ApiException(400, "Missing required parameter 'packageId' when calling AASXFileServerInterfaceApi->PutAASXByPackageId");
 
-            var localVarPath = "./packages/{packageId}";
+            var localVarPath = "/packages/{packageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -984,7 +984,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1027,7 +1027,7 @@ namespace AAS.OpenApi.Client.Api
             if (packageId == null)
                 throw new ApiException(400, "Missing required parameter 'packageId' when calling AASXFileServerInterfaceApi->PutAASXByPackageId");
 
-            var localVarPath = "./packages/{packageId}";
+            var localVarPath = "/packages/{packageId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1067,7 +1067,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -449,7 +449,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellInterfaceApi->DeleteSubmodelReferenceById");
 
-            var localVarPath = "./aas/submodels/{submodelIdentifier}";
+            var localVarPath = "/aas/submodels/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -485,7 +485,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -513,7 +513,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellInterfaceApi->DeleteSubmodelReferenceById");
 
-            var localVarPath = "./aas/submodels/{submodelIdentifier}";
+            var localVarPath = "/aas/submodels/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -549,7 +549,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -572,7 +572,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<Reference> > GetAllSubmodelReferencesWithHttpInfo ()
         {
 
-            var localVarPath = "./aas/submodels";
+            var localVarPath = "/aas/submodels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -608,7 +608,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<Reference>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<Reference>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Reference>)));
         }
 
@@ -632,7 +632,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<Reference>>> GetAllSubmodelReferencesAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "./aas/submodels";
+            var localVarPath = "/aas/submodels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -668,7 +668,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<Reference>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<Reference>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Reference>)));
         }
 
@@ -693,7 +693,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< AssetAdministrationShell > GetAssetAdministrationShellWithHttpInfo (string content = null)
         {
 
-            var localVarPath = "./aas";
+            var localVarPath = "/aas";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -730,7 +730,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShell>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShell) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShell)));
         }
 
@@ -756,7 +756,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<AssetAdministrationShell>> GetAssetAdministrationShellAsyncWithHttpInfo (string content = null)
         {
 
-            var localVarPath = "./aas";
+            var localVarPath = "/aas";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -793,7 +793,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShell>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShell) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShell)));
         }
 
@@ -816,7 +816,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< AssetInformation > GetAssetInformationWithHttpInfo ()
         {
 
-            var localVarPath = "./aas/asset-information";
+            var localVarPath = "/aas/asset-information";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -852,7 +852,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetInformation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetInformation)));
         }
 
@@ -876,7 +876,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<AssetInformation>> GetAssetInformationAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "./aas/asset-information";
+            var localVarPath = "/aas/asset-information";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -912,7 +912,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetInformation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetInformation)));
         }
 
@@ -940,7 +940,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellInterfaceApi->PostSubmodelReference");
 
-            var localVarPath = "./aas/submodels";
+            var localVarPath = "/aas/submodels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -985,7 +985,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Reference>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Reference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reference)));
         }
 
@@ -1014,7 +1014,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellInterfaceApi->PostSubmodelReference");
 
-            var localVarPath = "./aas/submodels";
+            var localVarPath = "/aas/submodels";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1059,7 +1059,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Reference>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Reference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reference)));
         }
 
@@ -1088,7 +1088,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellInterfaceApi->PutAssetAdministrationShell");
 
-            var localVarPath = "./aas";
+            var localVarPath = "/aas";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1133,7 +1133,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1163,7 +1163,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellInterfaceApi->PutAssetAdministrationShell");
 
-            var localVarPath = "./aas";
+            var localVarPath = "/aas";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1208,7 +1208,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1235,7 +1235,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellInterfaceApi->PutAssetInformation");
 
-            var localVarPath = "./aas/asset-information";
+            var localVarPath = "/aas/asset-information";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1279,7 +1279,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1307,7 +1307,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellInterfaceApi->PutAssetInformation");
 
-            var localVarPath = "./aas/asset-information";
+            var localVarPath = "/aas/asset-information";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1351,7 +1351,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

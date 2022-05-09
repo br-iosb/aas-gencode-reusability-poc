@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -381,7 +381,7 @@ namespace AAS.OpenApi.Client.Api
             if (cdIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'cdIdentifier' when calling ConceptDescriptionRepositoryInterfaceApi->DeleteConceptDescriptionById");
 
-            var localVarPath = "./concept-descriptions/{cdIdentifier}";
+            var localVarPath = "/concept-descriptions/{cdIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -417,7 +417,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -445,7 +445,7 @@ namespace AAS.OpenApi.Client.Api
             if (cdIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'cdIdentifier' when calling ConceptDescriptionRepositoryInterfaceApi->DeleteConceptDescriptionById");
 
-            var localVarPath = "./concept-descriptions/{cdIdentifier}";
+            var localVarPath = "/concept-descriptions/{cdIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -481,7 +481,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -510,7 +510,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<ConceptDescription> > GetAllConceptDescriptionsWithHttpInfo (string idShort = null, string isCaseOf = null, string dataSpecificationRef = null)
         {
 
-            var localVarPath = "./concept-descriptions";
+            var localVarPath = "/concept-descriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -549,7 +549,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<ConceptDescription>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<ConceptDescription>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ConceptDescription>)));
         }
 
@@ -579,7 +579,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<ConceptDescription>>> GetAllConceptDescriptionsAsyncWithHttpInfo (string idShort = null, string isCaseOf = null, string dataSpecificationRef = null)
         {
 
-            var localVarPath = "./concept-descriptions";
+            var localVarPath = "/concept-descriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -618,7 +618,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<ConceptDescription>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<ConceptDescription>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ConceptDescription>)));
         }
 
@@ -646,7 +646,7 @@ namespace AAS.OpenApi.Client.Api
             if (cdIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'cdIdentifier' when calling ConceptDescriptionRepositoryInterfaceApi->GetConceptDescriptionById");
 
-            var localVarPath = "./concept-descriptions/{cdIdentifier}";
+            var localVarPath = "/concept-descriptions/{cdIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -683,7 +683,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<ConceptDescription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ConceptDescription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConceptDescription)));
         }
 
@@ -712,7 +712,7 @@ namespace AAS.OpenApi.Client.Api
             if (cdIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'cdIdentifier' when calling ConceptDescriptionRepositoryInterfaceApi->GetConceptDescriptionById");
 
-            var localVarPath = "./concept-descriptions/{cdIdentifier}";
+            var localVarPath = "/concept-descriptions/{cdIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -749,7 +749,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<ConceptDescription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ConceptDescription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConceptDescription)));
         }
 
@@ -777,7 +777,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ConceptDescriptionRepositoryInterfaceApi->PostConceptDescription");
 
-            var localVarPath = "./concept-descriptions";
+            var localVarPath = "/concept-descriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -822,7 +822,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<ConceptDescription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ConceptDescription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConceptDescription)));
         }
 
@@ -851,7 +851,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling ConceptDescriptionRepositoryInterfaceApi->PostConceptDescription");
 
-            var localVarPath = "./concept-descriptions";
+            var localVarPath = "/concept-descriptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -896,7 +896,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<ConceptDescription>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ConceptDescription) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConceptDescription)));
         }
 
@@ -928,7 +928,7 @@ namespace AAS.OpenApi.Client.Api
             if (cdIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'cdIdentifier' when calling ConceptDescriptionRepositoryInterfaceApi->PutConceptDescriptionById");
 
-            var localVarPath = "./concept-descriptions/{cdIdentifier}";
+            var localVarPath = "/concept-descriptions/{cdIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -973,7 +973,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1006,7 +1006,7 @@ namespace AAS.OpenApi.Client.Api
             if (cdIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'cdIdentifier' when calling ConceptDescriptionRepositoryInterfaceApi->PutConceptDescriptionById");
 
-            var localVarPath = "./concept-descriptions/{cdIdentifier}";
+            var localVarPath = "/concept-descriptions/{cdIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1051,7 +1051,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

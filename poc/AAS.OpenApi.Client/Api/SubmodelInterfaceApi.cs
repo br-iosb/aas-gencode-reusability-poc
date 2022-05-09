@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -683,7 +683,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->DeleteSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -719,7 +719,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -747,7 +747,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->DeleteSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -783,7 +783,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -812,7 +812,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<SubmodelElement> > GetAllSubmodelElementsWithHttpInfo (string level = null, string content = null, string extent = null)
         {
 
-            var localVarPath = "./submodel/submodel-elements";
+            var localVarPath = "/submodel/submodel-elements";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -851,7 +851,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<SubmodelElement>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SubmodelElement>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SubmodelElement>)));
         }
 
@@ -881,7 +881,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<SubmodelElement>>> GetAllSubmodelElementsAsyncWithHttpInfo (string level = null, string content = null, string extent = null)
         {
 
-            var localVarPath = "./submodel/submodel-elements";
+            var localVarPath = "/submodel/submodel-elements";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -920,7 +920,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<SubmodelElement>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SubmodelElement>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SubmodelElement>)));
         }
 
@@ -955,7 +955,7 @@ namespace AAS.OpenApi.Client.Api
             if (handleId == null)
                 throw new ApiException(400, "Missing required parameter 'handleId' when calling SubmodelInterfaceApi->GetOperationAsyncResult");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}/operation-results/{handleId}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}/operation-results/{handleId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -994,7 +994,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<OperationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (OperationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperationResult)));
         }
 
@@ -1030,7 +1030,7 @@ namespace AAS.OpenApi.Client.Api
             if (handleId == null)
                 throw new ApiException(400, "Missing required parameter 'handleId' when calling SubmodelInterfaceApi->GetOperationAsyncResult");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}/operation-results/{handleId}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}/operation-results/{handleId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1069,7 +1069,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<OperationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (OperationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperationResult)));
         }
 
@@ -1098,7 +1098,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< Submodel > GetSubmodelWithHttpInfo (string level = null, string content = null, string extent = null)
         {
 
-            var localVarPath = "./submodel";
+            var localVarPath = "/submodel";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1137,7 +1137,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Submodel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Submodel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Submodel)));
         }
 
@@ -1167,7 +1167,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<Submodel>> GetSubmodelAsyncWithHttpInfo (string level = null, string content = null, string extent = null)
         {
 
-            var localVarPath = "./submodel";
+            var localVarPath = "/submodel";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1206,7 +1206,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Submodel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Submodel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Submodel)));
         }
 
@@ -1240,7 +1240,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->GetSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1280,7 +1280,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelElement>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelElement) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelElement)));
         }
 
@@ -1315,7 +1315,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->GetSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1355,7 +1355,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelElement>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelElement) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelElement)));
         }
 
@@ -1392,7 +1392,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->InvokeOperation");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}/invoke";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}/invoke";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1440,7 +1440,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<OperationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (OperationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperationResult)));
         }
 
@@ -1478,7 +1478,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->InvokeOperation");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}/invoke";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}/invoke";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1526,7 +1526,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<OperationResult>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (OperationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OperationResult)));
         }
 
@@ -1560,7 +1560,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SubmodelInterfaceApi->PostSubmodelElement");
 
-            var localVarPath = "./submodel/submodel-elements";
+            var localVarPath = "/submodel/submodel-elements";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1608,7 +1608,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelElement>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelElement) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelElement)));
         }
 
@@ -1643,7 +1643,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SubmodelInterfaceApi->PostSubmodelElement");
 
-            var localVarPath = "./submodel/submodel-elements";
+            var localVarPath = "/submodel/submodel-elements";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1691,7 +1691,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelElement>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelElement) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelElement)));
         }
 
@@ -1730,7 +1730,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->PostSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1779,7 +1779,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelElement>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelElement) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelElement)));
         }
 
@@ -1819,7 +1819,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->PostSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1868,7 +1868,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelElement>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelElement) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelElement)));
         }
 
@@ -1901,7 +1901,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SubmodelInterfaceApi->PutSubmodel");
 
-            var localVarPath = "./submodel";
+            var localVarPath = "/submodel";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1948,7 +1948,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1982,7 +1982,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SubmodelInterfaceApi->PutSubmodel");
 
-            var localVarPath = "./submodel";
+            var localVarPath = "/submodel";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2029,7 +2029,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -2067,7 +2067,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->PutSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2115,7 +2115,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -2154,7 +2154,7 @@ namespace AAS.OpenApi.Client.Api
             if (idShortPath == null)
                 throw new ApiException(400, "Missing required parameter 'idShortPath' when calling SubmodelInterfaceApi->PutSubmodelElementByPath");
 
-            var localVarPath = "./submodel/submodel-elements/{idShortPath}";
+            var localVarPath = "/submodel/submodel-elements/{idShortPath}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2202,7 +2202,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

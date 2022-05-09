@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -377,7 +377,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRepositoryInterfaceApi->DeleteAssetAdministrationShellById");
 
-            var localVarPath = "./shells/{aasIdentifier}";
+            var localVarPath = "/shells/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -413,7 +413,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -441,7 +441,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRepositoryInterfaceApi->DeleteAssetAdministrationShellById");
 
-            var localVarPath = "./shells/{aasIdentifier}";
+            var localVarPath = "/shells/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -477,7 +477,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -504,7 +504,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<AssetAdministrationShell> > GetAllAssetAdministrationShellsWithHttpInfo (List<IdentifierKeyValuePair> assetIds = null, string idShort = null)
         {
 
-            var localVarPath = "./shells";
+            var localVarPath = "/shells";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -542,7 +542,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<AssetAdministrationShell>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<AssetAdministrationShell>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AssetAdministrationShell>)));
         }
 
@@ -570,7 +570,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<AssetAdministrationShell>>> GetAllAssetAdministrationShellsAsyncWithHttpInfo (List<IdentifierKeyValuePair> assetIds = null, string idShort = null)
         {
 
-            var localVarPath = "./shells";
+            var localVarPath = "/shells";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -608,7 +608,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<AssetAdministrationShell>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<AssetAdministrationShell>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AssetAdministrationShell>)));
         }
 
@@ -636,7 +636,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRepositoryInterfaceApi->GetAssetAdministrationShellById");
 
-            var localVarPath = "./shells/{aasIdentifier}";
+            var localVarPath = "/shells/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -673,7 +673,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShell>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShell) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShell)));
         }
 
@@ -702,7 +702,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRepositoryInterfaceApi->GetAssetAdministrationShellById");
 
-            var localVarPath = "./shells/{aasIdentifier}";
+            var localVarPath = "/shells/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -739,7 +739,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShell>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShell) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShell)));
         }
 
@@ -767,7 +767,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellRepositoryInterfaceApi->PostAssetAdministrationShell");
 
-            var localVarPath = "./shells";
+            var localVarPath = "/shells";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -812,7 +812,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShell>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShell) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShell)));
         }
 
@@ -841,7 +841,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellRepositoryInterfaceApi->PostAssetAdministrationShell");
 
-            var localVarPath = "./shells";
+            var localVarPath = "/shells";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -886,7 +886,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShell>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShell) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShell)));
         }
 
@@ -918,7 +918,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRepositoryInterfaceApi->PutAssetAdministrationShellById");
 
-            var localVarPath = "./shells/{aasIdentifier}";
+            var localVarPath = "/shells/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -963,7 +963,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -996,7 +996,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRepositoryInterfaceApi->PutAssetAdministrationShellById");
 
-            var localVarPath = "./shells/{aasIdentifier}";
+            var localVarPath = "/shells/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1041,7 +1041,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

@@ -11,12 +11,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = AAS.OpenApi.Client.Client.SwaggerDateConverter;
 
 namespace AAS.OpenApi.Client.Model
@@ -25,7 +27,7 @@ namespace AAS.OpenApi.Client.Model
     /// AccessPermissionRule
     /// </summary>
     [DataContract]
-        public partial class AccessPermissionRule : Referable,  IEquatable<AccessPermissionRule>
+        public partial class AccessPermissionRule : Referable,  IEquatable<AccessPermissionRule>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AccessPermissionRule" /> class.
@@ -33,7 +35,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="qualifiers">qualifiers.</param>
         /// <param name="permissionsPerObject">permissionsPerObject.</param>
         /// <param name="targetSubjectAttributes">targetSubjectAttributes (required).</param>
-        public AccessPermissionRule(List<Constraint> qualifiers = default(List<Constraint>), List<PermissionsPerObject> permissionsPerObject = default(List<PermissionsPerObject>), List<SubjectAttributes> targetSubjectAttributes = default(List<SubjectAttributes>), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
+        public AccessPermissionRule(List<Constraint> qualifiers = default(List<Constraint>), List<PermissionsPerObject> permissionsPerObject = default(List<PermissionsPerObject>), List<SubjectAttributes> targetSubjectAttributes = default(List<SubjectAttributes>), List<Constraint> qualifiers = default(List<Constraint>), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
         {
             // to ensure "targetSubjectAttributes" is required (not null)
             if (targetSubjectAttributes == null)
@@ -149,6 +151,16 @@ namespace AAS.OpenApi.Client.Model
                     hashCode = hashCode * 59 + this.TargetSubjectAttributes.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 }

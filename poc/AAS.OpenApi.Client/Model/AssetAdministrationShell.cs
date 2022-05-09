@@ -11,12 +11,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = AAS.OpenApi.Client.Client.SwaggerDateConverter;
 
 namespace AAS.OpenApi.Client.Model
@@ -25,7 +27,7 @@ namespace AAS.OpenApi.Client.Model
     /// AssetAdministrationShell
     /// </summary>
     [DataContract]
-        public partial class AssetAdministrationShell : Identifiable,  IEquatable<AssetAdministrationShell>
+        public partial class AssetAdministrationShell : Identifiable,  IEquatable<AssetAdministrationShell>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AssetAdministrationShell" /> class.
@@ -36,7 +38,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="security">security.</param>
         /// <param name="submodels">submodels.</param>
         /// <param name="views">views.</param>
-        public AssetAdministrationShell(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AssetInformation assetInformation = default(AssetInformation), ModelReference derivedFrom = default(ModelReference), Security security = default(Security), List<ModelReference> submodels = default(List<ModelReference>), List<View> views = default(List<View>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
+        public AssetAdministrationShell(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AssetInformation assetInformation = default(AssetInformation), ModelReference derivedFrom = default(ModelReference), Security security = default(Security), List<ModelReference> submodels = default(List<ModelReference>), List<View> views = default(List<View>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
         {
             // to ensure "assetInformation" is required (not null)
             if (assetInformation == null)
@@ -197,6 +199,16 @@ namespace AAS.OpenApi.Client.Model
                     hashCode = hashCode * 59 + this.Views.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 }

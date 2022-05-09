@@ -11,12 +11,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = AAS.OpenApi.Client.Client.SwaggerDateConverter;
 
 namespace AAS.OpenApi.Client.Model
@@ -25,7 +27,7 @@ namespace AAS.OpenApi.Client.Model
     /// Qualifier
     /// </summary>
     [DataContract]
-        public partial class Qualifier : HasSemantics,  IEquatable<Qualifier>
+        public partial class Qualifier : HasSemantics,  IEquatable<Qualifier>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Qualifier" /> class.
@@ -34,7 +36,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="valueId">valueId.</param>
         /// <param name="valueType">valueType.</param>
         /// <param name="type">type (required).</param>
-        public Qualifier(string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), string type = default(string), Reference semanticId = default(Reference)) : base(semanticId)
+        public Qualifier(string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), string type = default(string), string value = default(string), Reference semanticId = default(Reference)) : base(semanticId)
         {
             // to ensure "type" is required (not null)
             if (type == null)
@@ -162,6 +164,16 @@ namespace AAS.OpenApi.Client.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 }

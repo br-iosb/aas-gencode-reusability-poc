@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -599,7 +599,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->DeleteAssetAdministrationShellDescriptorById");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -635,7 +635,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -663,7 +663,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->DeleteAssetAdministrationShellDescriptorById");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -699,7 +699,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -731,7 +731,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->DeleteSubmodelDescriptorByIdAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -768,7 +768,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -801,7 +801,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->DeleteSubmodelDescriptorByIdAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -838,7 +838,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -861,7 +861,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<AssetAdministrationShellDescriptor> > GetAllAssetAdministrationShellDescriptorsWithHttpInfo ()
         {
 
-            var localVarPath = "./registry/shell-descriptors";
+            var localVarPath = "/registry/shell-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -897,7 +897,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<AssetAdministrationShellDescriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<AssetAdministrationShellDescriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AssetAdministrationShellDescriptor>)));
         }
 
@@ -921,7 +921,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<AssetAdministrationShellDescriptor>>> GetAllAssetAdministrationShellDescriptorsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "./registry/shell-descriptors";
+            var localVarPath = "/registry/shell-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -957,7 +957,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<AssetAdministrationShellDescriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<AssetAdministrationShellDescriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<AssetAdministrationShellDescriptor>)));
         }
 
@@ -985,7 +985,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->GetAllSubmodelDescriptorsAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1022,7 +1022,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<SubmodelDescriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SubmodelDescriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SubmodelDescriptor>)));
         }
 
@@ -1051,7 +1051,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->GetAllSubmodelDescriptorsAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1088,7 +1088,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<SubmodelDescriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<SubmodelDescriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SubmodelDescriptor>)));
         }
 
@@ -1116,7 +1116,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->GetAssetAdministrationShellDescriptorById");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1153,7 +1153,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShellDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShellDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShellDescriptor)));
         }
 
@@ -1182,7 +1182,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->GetAssetAdministrationShellDescriptorById");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1219,7 +1219,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShellDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShellDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShellDescriptor)));
         }
 
@@ -1252,7 +1252,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->GetSubmodelDescriptorByIdAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1290,7 +1290,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -1324,7 +1324,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->GetSubmodelDescriptorByIdAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1362,7 +1362,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -1390,7 +1390,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellRegistryInterfaceApi->PostAssetAdministrationShellDescriptor");
 
-            var localVarPath = "./registry/shell-descriptors";
+            var localVarPath = "/registry/shell-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1435,7 +1435,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShellDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShellDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShellDescriptor)));
         }
 
@@ -1464,7 +1464,7 @@ namespace AAS.OpenApi.Client.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AssetAdministrationShellRegistryInterfaceApi->PostAssetAdministrationShellDescriptor");
 
-            var localVarPath = "./registry/shell-descriptors";
+            var localVarPath = "/registry/shell-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1509,7 +1509,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<AssetAdministrationShellDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (AssetAdministrationShellDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssetAdministrationShellDescriptor)));
         }
 
@@ -1542,7 +1542,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->PostSubmodelDescriptorAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1588,7 +1588,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -1622,7 +1622,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->PostSubmodelDescriptorAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1668,7 +1668,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<SubmodelDescriptor>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SubmodelDescriptor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SubmodelDescriptor)));
         }
 
@@ -1700,7 +1700,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->PutAssetAdministrationShellDescriptorById");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1745,7 +1745,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1778,7 +1778,7 @@ namespace AAS.OpenApi.Client.Api
             if (aasIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'aasIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->PutAssetAdministrationShellDescriptorById");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1823,7 +1823,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1860,7 +1860,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->PutSubmodelDescriptorByIdAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1906,7 +1906,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 
@@ -1944,7 +1944,7 @@ namespace AAS.OpenApi.Client.Api
             if (submodelIdentifier == null)
                 throw new ApiException(400, "Missing required parameter 'submodelIdentifier' when calling AssetAdministrationShellRegistryInterfaceApi->PutSubmodelDescriptorByIdAASRegistry");
 
-            var localVarPath = "./registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
+            var localVarPath = "/registry/shell-descriptors/{aasIdentifier}/submodel-descriptors/{submodelIdentifier}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1990,7 +1990,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }
 

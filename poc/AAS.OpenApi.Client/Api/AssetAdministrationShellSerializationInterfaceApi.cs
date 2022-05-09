@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 
 namespace AAS.OpenApi.Client.Api
@@ -219,7 +219,7 @@ namespace AAS.OpenApi.Client.Api
             if (includeConceptDescriptions == null)
                 throw new ApiException(400, "Missing required parameter 'includeConceptDescriptions' when calling AssetAdministrationShellSerializationInterfaceApi->GenerateSerializationByIds");
 
-            var localVarPath = "./serialization";
+            var localVarPath = "/serialization";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -260,7 +260,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<byte[]>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
@@ -299,7 +299,7 @@ namespace AAS.OpenApi.Client.Api
             if (includeConceptDescriptions == null)
                 throw new ApiException(400, "Missing required parameter 'includeConceptDescriptions' when calling AssetAdministrationShellSerializationInterfaceApi->GenerateSerializationByIds");
 
-            var localVarPath = "./serialization";
+            var localVarPath = "/serialization";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -340,7 +340,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<byte[]>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 

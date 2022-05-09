@@ -11,12 +11,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = AAS.OpenApi.Client.Client.SwaggerDateConverter;
 
 namespace AAS.OpenApi.Client.Model
@@ -25,14 +27,14 @@ namespace AAS.OpenApi.Client.Model
     /// ConceptDescription
     /// </summary>
     [DataContract]
-        public partial class ConceptDescription : Identifiable,  IEquatable<ConceptDescription>
+        public partial class ConceptDescription : Identifiable,  IEquatable<ConceptDescription>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConceptDescription" /> class.
         /// </summary>
         /// <param name="embeddedDataSpecifications">embeddedDataSpecifications.</param>
         /// <param name="isCaseOf">isCaseOf.</param>
-        public ConceptDescription(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), List<Reference> isCaseOf = default(List<Reference>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
+        public ConceptDescription(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), List<Reference> isCaseOf = default(List<Reference>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), AdministrativeInformation administration = default(AdministrativeInformation), string identification = default(string)) : base(administration, identification)
         {
             this.EmbeddedDataSpecifications = embeddedDataSpecifications;
             this.IsCaseOf = isCaseOf;
@@ -124,6 +126,16 @@ namespace AAS.OpenApi.Client.Model
                     hashCode = hashCode * 59 + this.IsCaseOf.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 }

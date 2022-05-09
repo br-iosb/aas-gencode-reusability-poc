@@ -11,12 +11,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = AAS.OpenApi.Client.Client.SwaggerDateConverter;
 
 namespace AAS.OpenApi.Client.Model
@@ -25,7 +27,7 @@ namespace AAS.OpenApi.Client.Model
     /// View
     /// </summary>
     [DataContract]
-        public partial class View : Referable,  IEquatable<View>
+        public partial class View : Referable,  IEquatable<View>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="View" /> class.
@@ -33,7 +35,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="embeddedDataSpecifications">embeddedDataSpecifications.</param>
         /// <param name="semanticId">semanticId.</param>
         /// <param name="containedElements">containedElements.</param>
-        public View(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Reference> containedElements = default(List<Reference>), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
+        public View(List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Reference> containedElements = default(List<Reference>), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), string category = default(string), List<LangString> description = default(List<LangString>), List<LangString> displayName = default(List<LangString>), string idShort = default(string), ModelType modelType = default(ModelType)) : base(category, description, displayName, idShort, modelType)
         {
             this.EmbeddedDataSpecifications = embeddedDataSpecifications;
             this.SemanticId = semanticId;
@@ -140,6 +142,16 @@ namespace AAS.OpenApi.Client.Model
                     hashCode = hashCode * 59 + this.ContainedElements.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 }

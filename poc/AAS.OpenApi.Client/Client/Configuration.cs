@@ -56,7 +56,11 @@ namespace AAS.OpenApi.Client.Client
                     string.Format("Error calling {0}: {1}", methodName, response.Content),
                     response.Content);
             }
-            
+            if (status == 0)
+            {
+                return new ApiException(status,
+                    string.Format("Error calling {0}: {1}", methodName, response.ErrorMessage), response.ErrorMessage);
+            }
             return null;
         };
 
@@ -243,14 +247,16 @@ namespace AAS.OpenApi.Client.Client
         /// </summary>
         public virtual int Timeout
         {
+            
             get
-            { 
+            {
                 if (_apiClient == null)
                 {
                     return _timeout;
-                } else
+                } 
+                else
                 {
-                    return (int)ApiClient.RestClient.Timeout.GetValueOrDefault(TimeSpan.FromSeconds(0)).TotalMilliseconds;
+                    return ApiClient.RestClient.Timeout;
                 }
             }
             set
@@ -258,7 +264,7 @@ namespace AAS.OpenApi.Client.Client
                 _timeout = value;
                 if (_apiClient != null)
                 {
-                    ApiClient.RestClient.Timeout = TimeSpan.FromMilliseconds(_timeout);
+                    ApiClient.RestClient.Timeout = _timeout;
                 }
             }
         }
@@ -429,7 +435,8 @@ namespace AAS.OpenApi.Client.Client
         public static String ToDebugReport()
         {
             String report = "C# SDK (AAS.OpenApi.Client) Debug Report:\n";
-            report += "    OS: " + System.Runtime.InteropServices.RuntimeInformation.OSDescription + "\n";
+            report += "    OS: " + System.Environment.OSVersion + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: V1.0RC01\n";
             report += "    SDK Package Version: 1.0.0\n";
 

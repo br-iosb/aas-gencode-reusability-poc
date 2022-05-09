@@ -11,12 +11,14 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = AAS.OpenApi.Client.Client.SwaggerDateConverter;
 
 namespace AAS.OpenApi.Client.Model
@@ -25,7 +27,7 @@ namespace AAS.OpenApi.Client.Model
     /// Property
     /// </summary>
     [DataContract]
-        public partial class Property : SubmodelElementAttributes,  IEquatable<Property>
+        public partial class Property : SubmodelElementAttributes,  IEquatable<Property>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Property" /> class.
@@ -33,7 +35,7 @@ namespace AAS.OpenApi.Client.Model
         /// <param name="value">value.</param>
         /// <param name="valueId">valueId.</param>
         /// <param name="valueType">valueType.</param>
-        public Property(string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
+        public Property(string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), string value = default(string), Reference valueId = default(Reference), ValueTypeEnum valueType = default(ValueTypeEnum), List<EmbeddedDataSpecification> embeddedDataSpecifications = default(List<EmbeddedDataSpecification>), Reference semanticId = default(Reference), List<Constraint> qualifiers = default(List<Constraint>), ModelingKind kind = default(ModelingKind)) : base(embeddedDataSpecifications, semanticId, qualifiers, kind)
         {
             this.Value = value;
             this.ValueId = valueId;
@@ -138,6 +140,16 @@ namespace AAS.OpenApi.Client.Model
                     hashCode = hashCode * 59 + this.ValueType.GetHashCode();
                 return hashCode;
             }
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
         }
     }
 }

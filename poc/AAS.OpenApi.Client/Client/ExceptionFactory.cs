@@ -9,7 +9,7 @@
  */
 
 using System;
-using RestSharp.Portable;
+using RestSharp;
 
 namespace AAS.OpenApi.Client.Client
 {

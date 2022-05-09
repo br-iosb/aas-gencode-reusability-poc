@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using RestSharp.Portable;
+using RestSharp;
 using AAS.OpenApi.Client.Client;
 using AAS.OpenApi.Client.Model;
 
@@ -193,7 +193,7 @@ namespace AAS.OpenApi.Client.Api
         public ApiResponse< List<Descriptor> > GetDescriptorWithHttpInfo ()
         {
 
-            var localVarPath = "./descriptor";
+            var localVarPath = "/descriptor";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -229,7 +229,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<Descriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<Descriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Descriptor>)));
         }
 
@@ -253,7 +253,7 @@ namespace AAS.OpenApi.Client.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<Descriptor>>> GetDescriptorAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "./descriptor";
+            var localVarPath = "/descriptor";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -289,7 +289,7 @@ namespace AAS.OpenApi.Client.Api
             }
 
             return new ApiResponse<List<Descriptor>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => string.Join(",", x.Value)),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<Descriptor>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Descriptor>)));
         }
 
