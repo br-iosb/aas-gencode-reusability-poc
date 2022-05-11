@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\aas-core3.0rc02-csharp\src\AasCore.Aas3_0_RC02\AasCore.Aas3_0_RC02.csproj" />
     <ProjectReference Include="..\AasFaker\AasFaker.csproj" />
-    <ProjectReference Include="..\core\core.csproj" />
   </ItemGroup>
 
 </Project>

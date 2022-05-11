@@ -8,8 +8,8 @@ namespace AasFaker.Test
         [SetUp]
         public void Setup()
         {
-            var types = typeof(AasCore.Aas3.AssetAdministrationShell).Assembly.GetTypes();
-            var iclasses =    types.AsQueryable().Where(x => typeof(AasCore.Aas3.IClass).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract).ToList();
+            var types = typeof(AasCore.Aas3_0_RC02.AssetAdministrationShell).Assembly.GetTypes();
+            var iclasses =    types.AsQueryable().Where(x => typeof(AasCore.Aas3_0_RC02.IClass).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract).ToList();
             iclasses[0].GetConstructors().First().GetParameters();
             TestContext.WriteLine("Done");
         }
@@ -19,7 +19,7 @@ namespace AasFaker.Test
         {
             var langstringset = new AasFaker.AASDataFake().FakeLangStringSet();
 
-            TestContext.WriteLine(AasCore.Aas3.Jsonization.Serialize.ToJsonObject(langstringset));
+            TestContext.WriteLine(AasCore.Aas3_0_RC02.Jsonization.Serialize.ToJsonObject(langstringset));
         }
     }
 }

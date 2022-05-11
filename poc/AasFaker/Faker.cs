@@ -1,5 +1,5 @@
 ﻿using Bogus;
-using AasCore.Aas3;
+using AasCore.Aas3_0_RC02;
 
 namespace AasFaker
 {
