@@ -1,0 +1,3 @@
+[submodule "aas-core3.0rc02-csharp"]
+	path = aas-core3.0rc02-csharp
+	url = https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
